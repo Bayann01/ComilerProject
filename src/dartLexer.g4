@@ -8,7 +8,6 @@ CB: ']';
 CBC: '}';
 CIR: '^';
 CIRE: '^=';
-//comment
 CO: ':';
 CP: ')';
 D: '.';
