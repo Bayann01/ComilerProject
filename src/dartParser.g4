@@ -10,7 +10,6 @@ whileBlock : WHILE_ OP exprission  CP block ;
 forBlock : FOR_ OP statment  exprission SC exprission CP block;
 doStatement : DO_ statment WHILE_ OP exprission CP SC ;
 datatypes : INTTYPE |DOUBLETYPE |STRINGTYPE | FLOATTYPE | BOOLTYPE | VARTYPE ;
-
 decl : declINT | decldouble | declFLOAT | declSTRING | declbool | declVar;
 varplusplus : IDENTIFIER PLPL | PLPL IDENTIFIER;
 varminusminus :IDENTIFIER MM | MM IDENTIFIER;
