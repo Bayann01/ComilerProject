@@ -1,7 +1,7 @@
 parser grammar dartParser;
 options { tokenVocab=dartLexer; }
-prog :  functionMain line* | line* functionMain |functionMain   EOF ;
-line :   statment | ifBlock | whileBlock |function | functionVoid | forBlock | doStatement;
+prog :  functionMain line*  | line* functionMain  | functionMain EOF ;
+line :   statment | ifBlock | whileBlock |function | functionVoid | forBlock | doStatement | switchCase;
 functionMain:  VOID_ Main OP (datatypes exprission( C datatypes exprission)*)? CP OBC line* CBC;
 statment : ( decl  | assignment | functionCall | varplusplus|varminusminus) SC ;
 ifBlock : IF_ exprission  block  (ELSE_  elseifblock ) ;
@@ -28,3 +28,4 @@ boolOPERATIONS : EE | EG | GT | LT | LTE | LTLT | LT |LTLTE|NE ;
 exprission: constatnt | functionCall | NOT exprission | exprission ST exprission |OP exprission CP | exprission PL exprission|exprission SL exprission | exprission MINUS exprission | IDENTIFIER  |exprission boolOPERATIONS  exprission   ;
 block : OBC line* CBC;
 constatnt : NUMBER |BOOL | VAR_|SingleLineString |NULL_ | INT ;
+switchCase : SWITCH_ OP IDENTIFIER CP (CASE_ constatnt CO exprission SC BREAK_ SC(CASE_ constatnt CO exprission SC BREAK_ SC)*)+ FINALLY_ CO exprission SC ;
