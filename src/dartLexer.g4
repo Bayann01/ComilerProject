@@ -132,7 +132,18 @@ BOOL: TRUE_ | FALSE_ ;
 PUBLIC_:'public';
 PROTECT_:'protect';
 PRIVATE_:'private';
+Image_:'Image';
+IMAGEIN_:'image';
+NETWORKIMAGE_:'NetWorkImage';
+NEW_:'new';
+TEXT_:'text';
+TEXTFIELD_:'TextField';
+LABELTEXT_:'labelText';
+HINTTEXT_:'hintText';
+HEIGHT_:'height';
 
+Maram alghsh, [02-Jan-23 11:17 AM]
+WIDTH_:'width';
 ACCESSMODIFIER : PRIVATE_|PROTECT_|PUBLIC_;
 NUMBER : DIGIT+ ( '.' DIGIT+ )? EXPONENT? | '.' DIGIT+ EXPONENT? ;
 HEX_NUMBER : '0x' HEX_DIGIT+ | '0X' HEX_DIGIT+ ;
