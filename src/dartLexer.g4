@@ -44,6 +44,7 @@ QUD: '?.';
 QUDD: '?..';
 QUQU: '??';
 QUQUEQ: '??=';
+ROW: 'ROW' ;
 SC: ';';
 SE: '/=';
 SL: '/';
@@ -133,8 +134,6 @@ PROTECT_:'protect';
 PRIVATE_:'private';
 
 ACCESSMODIFIER : PRIVATE_|PROTECT_|PUBLIC_;
-
-
 NUMBER : DIGIT+ ( '.' DIGIT+ )? EXPONENT? | '.' DIGIT+ EXPONENT? ;
 HEX_NUMBER : '0x' HEX_DIGIT+ | '0X' HEX_DIGIT+ ;
 SingleLineString : StringDQ | StringSQ | 'r\'' (~('\'' | '\n' | '\r'))* '\'' | 'r"' (~('"' | '\n' | '\r'))* '"' ;

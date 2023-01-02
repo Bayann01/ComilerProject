@@ -20,7 +20,7 @@ declFLOAT: FLOATTYPE IDENTIFIER EQ NUMBER ;
 declbool : BOOLTYPE IDENTIFIER EQ BOOL ;
 declVar: VARTYPE IDENTIFIER EQ constatnt;
 parametersFUNCTION :  INTTYPE IDENTIFIER |   DOUBLETYPE IDENTIFIER  | STRINGTYPE IDENTIFIER | FLOATTYPE IDENTIFIER  |  BOOLTYPE IDENTIFIER | VARTYPE IDENTIFIER ;
-assignment :   IDENTIFIER EQ exprission ;
+assignment :  IDENTIFIER EQ exprission ;
 functionVoid: VOID_ IDENTIFIER OP (parametersFUNCTION (C parametersFUNCTION)*)? CP OBC line* CBC;
 function: datatypes IDENTIFIER OP (parametersFUNCTION( C parametersFUNCTION)*)? CP OBC line* RETURN_ IDENTIFIER SC CBC;
 functionCall : IDENTIFIER OP (exprission( C exprission)*)? CP;
@@ -29,3 +29,4 @@ exprission: constatnt | functionCall | NOT exprission | exprission ST exprission
 block : OBC line* CBC;
 constatnt : NUMBER |BOOL | VAR_|SingleLineString |NULL_ | INT ;
 switchCase : SWITCH_ OP IDENTIFIER CP (CASE_ constatnt CO exprission SC BREAK_ SC(CASE_ constatnt CO exprission SC BREAK_ SC)*)+ FINALLY_ CO exprission SC ;
+row : ROW ':' '[' ']' ;
