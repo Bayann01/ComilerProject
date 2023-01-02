@@ -87,7 +87,16 @@ imageProperties
  shape : SHAPE_ ':' BOXSHAPE_ D IDENTIFIER;
 
 
+//ROW&COLUMN
+row : ROW_ '(' (rowProperties (',')? ) ')' ;
+rowProperties :  children | rowproperty children | children rowproperty;
+rowproperty :(( MAINAXISALIGNMENTIN ':'  MAINAXISALIGNMENT) | (  CROSSAXISALIGNMENTIN ':' CROSSAXISALIGNMENT)  ) '.' ( CENTER | END | START ) ;
+children  : CHILDREN ':' '[' (widgets (',')? |  (widgets (','))+ )  ']' ',';
 
+
+column : COLUMN_ '(' columnProperties (',')? ')'  ;
+columnProperties :  children | (columnproperty)*  children   |  children columnproperty (',')?;
+columnproperty :(( MAINAXISALIGNMENTIN ':'  MAINAXISALIGNMENT) | (  CROSSAXISALIGNMENTIN ':' CROSSAXISALIGNMENT)  ) '.' ( CENTER | END | START ) ',' ;
 
 
 

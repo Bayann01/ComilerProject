@@ -153,6 +153,18 @@ LABELTEXT_:'labelText';
 HINTTEXT_:'hintText';
 HEIGHT_:'height';
 WIDTH_:'width';
+//row&cloumn
+ROW_: 'Row' ;
+COLUMN_: 'Column';
+CHILDREN : 'children';
+MAINAXISALIGNMENT: 'MainAxisAlignment';
+MAINAXISALIGNMENTIN: 'mainAxisAlignment';
+CROSSAXISALIGNMENT : 'CrossAxisAlignment';
+CROSSAXISALIGNMENTIN : 'crossAxisAlignment';
+CENTER : 'center';
+END :'end' ;
+START: 'start';
+//
 ACCESSMODIFIER : PRIVATE_|PROTECT_|PUBLIC_;
 NUMBER : DIGIT+ ( '.' DIGIT+ )? EXPONENT? | '.' DIGIT+ EXPONENT? ;
 HEX_NUMBER : '0x' HEX_DIGIT+ | '0X' HEX_DIGIT+ ;
