@@ -1,7 +1,7 @@
 parser grammar dartParser;
 options { tokenVocab= dartLexer ; }
-prog :  functionMain line* | line* functionMain |functionMain |classDecl  EOF ;
-line :   statment | ifBlock | whileBlock |function | functionVoid | forBlock | doStatement |arrays;
+prog :  functionMain line* | line* functionMain |functionMain   EOF ;
+line :   statment | ifBlock | whileBlock |function | functionVoid | forBlock | doStatement |arrays |classDecl;
 ///////////////////////////////////////////////////////////
 classDecl: CLASS_ IDENTIFIER OBC classBody CBC;
 classBody: ((parametersFUNCTION | decl) SC)* (classConstructor)* (function)* (functionVoid)*;

@@ -72,7 +72,6 @@ imageProperties
  width:
  WIDTH_ ':'NUMBER;
  ///////container////////////
- ///////////////////////////////
  container :CONTAINER_ '('  containerproperties* child ')' SC |CONTAINER_ '(' child containerproperties*  ')' SC ;
  containerproperties
           :color
