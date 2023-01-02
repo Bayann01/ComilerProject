@@ -1,7 +1,19 @@
 parser grammar dartParser;
 options { tokenVocab= dartLexer ; }
-prog :  functionMain line* | line* functionMain |functionMain   EOF ;
+prog :  functionMain line* | line* functionMain |functionMain |classDecl  EOF ;
 line :   statment | ifBlock | whileBlock |function | functionVoid | forBlock | doStatement |arrays;
+///////////////////////////////////////////////////////////
+classDecl: CLASS_ IDENTIFIER OBC classBody CBC;
+classBody: ((parametersFUNCTION | decl) SC)* (classConstructor)* (function)* (functionVoid)*;
+classConstructor: normalConstructor | factoryConstructor;
+normalConstructor: constructorName OP parametersConstructor CP OBC constructorBody CBC;
+factoryConstructor: FACTORY_ constructorName OP parametersConstructor CP OBC factoryConstructorBody CBC;
+constructorBody: ((THIS_ D)? assignment SC)* (decl)* (function)* (functionCall SC)*;
+factoryConstructorBody: ((THIS_ D)? assignment SC)* (decl)* (function)* RETURN_ constructorName OP exprission* CP SC;
+optionalParameters: OBC ( parametersFUNCTION (C parametersFUNCTION)* ) CBC;
+parametersConstructor: ( parametersFUNCTION (C parametersFUNCTION)* ) (C optionalParameters ) | ( parametersFUNCTION (C parametersFUNCTION)* )? | optionalParameters?;
+constructorName: IDENTIFIER (D IDENTIFIER)?;
+////////////////////////////////////////////////////////
 functionMain:  VOID_ Main OP (datatypes exprission( C datatypes exprission)*)? CP OBC line* CBC;
 statment : ( decl  | assignment | functionCall | varplusplus|varminusminus) SC ;
 ifBlock : IF_ exprission  block  (ELSE_  elseifblock ) ;
