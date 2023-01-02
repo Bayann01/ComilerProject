@@ -1,7 +1,7 @@
 parser grammar flutterParser;
 options { tokenVocab=dartLexer ; }
 prog : widgets  ;
-widgets:textField|image ;
+widgets:textField|image|row|column|container ;
 //////////////textfield//////////
 ////////////////////////////////
 ///////////////////////////////
