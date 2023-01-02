@@ -71,6 +71,23 @@ imageProperties
  HEIGHT_ ':' NUMBER;
  width:
  WIDTH_ ':'NUMBER;
+ ///////container////////////
+ ///////////////////////////////
+ container :CONTAINER_ '('  containerproperties* child ')' SC |CONTAINER_ '(' child containerproperties*  ')' SC ;
+ containerproperties
+          :color
+          |decoration
+          |height
+          |width ;
+
+ child : CHILD_ ':' widgets  ;
+ color :COLOR_ ':' COLORS_ D IDENTIFIER ;
+
+ decoration : DECORATION_':' BOXDECORATION_'('(color |shape |color shape |shape color )')';
+ shape : SHAPE_ ':' BOXSHAPE_ D IDENTIFIER;
+
+
+
 
 
 
