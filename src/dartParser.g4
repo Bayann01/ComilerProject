@@ -1,7 +1,18 @@
 parser grammar dartParser;
 options { tokenVocab= dartLexer ; }
-prog :  functionMain line* | line* functionMain |functionMain   EOF ;
-line :   statment | ifBlock | whileBlock |function | functionVoid | forBlock | doStatement |arrays |classDecl;
+prog :  functionMain line*
+        | line* functionMain
+        |functionMain
+         EOF ;
+line :   statment
+        | ifBlock
+        | whileBlock
+        |function
+        | functionVoid
+        | forBlock
+        | doStatement
+        |arrays
+        |classDecl;
 ///////////////////////////////////////////////////////////
 classDecl: CLASS_ IDENTIFIER OBC classBody CBC;
 classBody: ((parametersFUNCTION | decl) SC)* (classConstructor)* (function)* (functionVoid)*;
@@ -16,7 +27,7 @@ constructorName: IDENTIFIER (D IDENTIFIER)?;
 ////////////////////////////////////////////////////////
 functionMain:  VOID_ Main OP (datatypes exprission( C datatypes exprission)*)? CP OBC line* CBC;
 statment : ( decl  | assignment | functionCall | varplusplus|varminusminus) SC ;
-ifBlock : IF_ exprission  block  (ELSE_  elseifblock ) ;
+ifBlock : IF_ exprission  block  (ELSE_  elseifblock )? ;
 elseifblock : block | ifBlock ;
 whileBlock : WHILE_ OP exprission  CP block ;
 forBlock : FOR_ OP statment  exprission SC exprission CP block;
@@ -41,7 +52,7 @@ exprission: constatnt | functionCall | NOT exprission | exprission ST exprission
 block : OBC line* CBC;
 constatnt : NUMBER |BOOL | VAR_|SingleLineString |NULL_ | INT ;
 arrays:array | list | queue |addlist_queue_stack | stack ;
-array:arrayINT |arrayDOUBLE |arraySTRING |arrayVAR | arrayBOOL  ;
+array: arrayINT |arrayDOUBLE |arraySTRING |arrayVAR | arrayBOOL  ;
 queue:queueINT |queueDOUBLE |queueSTRING | queueFLOAT| queueBOOL |queueVAR ;
 stack:stackINT |stackDOUBLE |stackSTRING | stackFLOAT| stackBOOL |stackVAR ;
 arrayINT:INTTYPE IDENTIFIER EQ OB INT (C INT)* CB  ;
