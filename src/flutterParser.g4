@@ -1,10 +1,9 @@
 parser grammar flutterParser;
 options { tokenVocab=dartLexer ; }
-prog : widgets  ;
+prog : widgets ;
 widgets:textField|image|row|column|container ;
+
 //////////////textfield//////////
-////////////////////////////////
-///////////////////////////////
 textField
     : TEXTFIELD_ '(' (textFieldProperties ',')+ ')'
     ;
@@ -85,13 +84,11 @@ imageProperties
  decoration : DECORATION_':' BOXDECORATION_'('(color |shape |color shape |shape color )')';
  shape : SHAPE_ ':' BOXSHAPE_ D IDENTIFIER;
 
-
 //ROW&COLUMN
 row : ROW_ '(' (rowProperties (',')? ) ')' ;
 rowProperties :  children | rowproperty children | children rowproperty;
 rowproperty :(( MAINAXISALIGNMENTIN ':'  MAINAXISALIGNMENT) | (  CROSSAXISALIGNMENTIN ':' CROSSAXISALIGNMENT)  ) '.' ( CENTER | END | START ) ;
 children  : CHILDREN ':' '[' (widgets (',')? |  (widgets (','))+ )  ']' ',';
-
 
 column : COLUMN_ '(' columnProperties (',')? ')'  ;
 columnProperties :  children | (columnproperty)*  children   |  children columnproperty (',')?;
