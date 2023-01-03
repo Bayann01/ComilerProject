@@ -4,19 +4,22 @@ prog :  functionMain line*
         | line* functionMain
         |functionMain
          EOF ;
-line :   statment
-        | ifBlock
-        | whileBlock
-        |function
-        | functionVoid
-        | forBlock
-        | doStatement
-        |arrays
-        |classDecl;
+line :   statment SC   #STATMENT
+        | ifBlock      #IFBLOCK
+        | whileBlock   #WHILEBLOCK
+        |function      #FUNNCTION
+        | functionVoid #FUNCTIONVOID
+        | forBlock     #FORBLOCK
+        | doStatement  #DOSTATMENT
+        |arrays        #ARRAYS
+        |classDecl     #CLASSDECLERATION
+        ;
 ///////////////////////////////////////////////////////////
 classDecl: CLASS_ IDENTIFIER OBC classBody CBC;
 classBody: ((parametersFUNCTION | decl) SC)* (classConstructor)* (function)* (functionVoid)*;
-classConstructor: normalConstructor | factoryConstructor;
+classConstructor: normalConstructor    #NORMALCONSTRUCTOR
+                 | factoryConstructor  #FACTORYCONSTRUCTOR
+                 ;
 normalConstructor: constructorName OP parametersConstructor CP OBC constructorBody CBC;
 factoryConstructor: FACTORY_ constructorName OP parametersConstructor CP OBC factoryConstructorBody CBC;
 constructorBody: ((THIS_ D)? assignment SC)* (decl)* (function)* (functionCall SC)*;
@@ -26,31 +29,82 @@ parametersConstructor: ( parametersFUNCTION (C parametersFUNCTION)* ) (C optiona
 constructorName: IDENTIFIER (D IDENTIFIER)?;
 ////////////////////////////////////////////////////////
 functionMain:  VOID_ Main OP (datatypes exprission( C datatypes exprission)*)? CP OBC line* CBC;
-statment : ( decl  | assignment | functionCall | varplusplus|varminusminus) SC ;
+statment :  decl          #DECRERATION
+            | assignment   #ASSIGNMNET
+            | functionCall #FUNCALL
+            | varplusplus  #VARPLUSPLUS
+            |varminusminus #VARMINUSMINUS
+             ;
 ifBlock : IF_ exprission  block  (ELSE_  elseifblock )? ;
-elseifblock : block | ifBlock ;
+elseifblock : block
+            | ifBlock ;
 whileBlock : WHILE_ OP exprission  CP block ;
 forBlock : FOR_ OP statment  exprission SC exprission CP block;
 doStatement : DO_ statment WHILE_ OP exprission CP SC ;
-datatypes : INTTYPE |DOUBLETYPE |STRINGTYPE | FLOATTYPE | BOOLTYPE | VARTYPE ;
-decl : declINT | decldouble | declFLOAT | declSTRING | declbool | declVar;
-varplusplus : IDENTIFIER PLPL | PLPL IDENTIFIER;
-varminusminus :IDENTIFIER MM | MM IDENTIFIER;
+datatypes : INTTYPE
+          |DOUBLETYPE
+          |STRINGTYPE
+          | FLOATTYPE
+          | BOOLTYPE
+          | VARTYPE
+          ;
+decl : declINT
+     | decldouble
+     | declFLOAT
+     | declSTRING
+     | declbool
+     | declVar
+     ;
+varplusplus : IDENTIFIER PLPL
+            | PLPL IDENTIFIER;
+varminusminus :IDENTIFIER MM
+              | MM IDENTIFIER;
 declINT : INTTYPE IDENTIFIER EQ INT ;
 decldouble : DOUBLETYPE IDENTIFIER EQ NUMBER ;
 declSTRING : STRINGTYPE IDENTIFIER EQ SingleLineString ;
 declFLOAT: FLOATTYPE IDENTIFIER EQ NUMBER ;
 declbool : BOOLTYPE IDENTIFIER EQ BOOL ;
 declVar: VARTYPE IDENTIFIER EQ constatnt;
-parametersFUNCTION :  INTTYPE IDENTIFIER |   DOUBLETYPE IDENTIFIER  | STRINGTYPE IDENTIFIER | FLOATTYPE IDENTIFIER  |  BOOLTYPE IDENTIFIER | VARTYPE IDENTIFIER ;
+parametersFUNCTION :  INTTYPE IDENTIFIER
+                   |  DOUBLETYPE IDENTIFIER
+                   | STRINGTYPE IDENTIFIER
+                   | FLOATTYPE IDENTIFIER
+                   |  BOOLTYPE IDENTIFIER
+                   | VARTYPE IDENTIFIER
+                   ;
 assignment :   IDENTIFIER EQ exprission ;
 functionVoid: VOID_ IDENTIFIER OP (parametersFUNCTION (C parametersFUNCTION)*)? CP OBC line* CBC;
 function: datatypes IDENTIFIER OP (parametersFUNCTION( C parametersFUNCTION)*)? CP OBC line* RETURN_ IDENTIFIER SC CBC;
 functionCall : IDENTIFIER OP (exprission( C exprission)*)? CP;
-boolOPERATIONS : EE | EG | GT | LT | LTE | LTLT | LT |LTLTE|NE ;
-exprission: constatnt | functionCall | NOT exprission | exprission ST exprission |OP exprission CP | exprission PL exprission|exprission SL exprission | exprission MINUS exprission | IDENTIFIER  |exprission boolOPERATIONS  exprission   ;
+boolOPERATIONS : EE
+               | EG
+               | GT
+               | LT
+               | LTE
+               | LTLT
+               | LT
+               |LTLTE
+               |NE
+               ;
+exprission: constatnt
+          | functionCall
+          | NOT exprission
+          | exprission ST exprission
+          |OP exprission CP
+          | exprission PL exprission
+          |exprission SL exprission
+          | exprission MINUS exprission
+          | IDENTIFIER
+          |exprission boolOPERATIONS  exprission
+           ;
 block : OBC line* CBC;
-constatnt : NUMBER |BOOL | VAR_|SingleLineString |NULL_ | INT ;
+constatnt : NUMBER
+          |BOOL
+          |VAR_
+          |SingleLineString
+          |NULL_
+          | INT
+          ;
 arrays:array | list | queue |addlist_queue_stack | stack ;
 array: arrayINT |arrayDOUBLE |arraySTRING |arrayVAR | arrayBOOL  ;
 queue:queueINT |queueDOUBLE |queueSTRING | queueFLOAT| queueBOOL |queueVAR ;
