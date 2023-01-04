@@ -1,11 +1,13 @@
-package antlr;// Generated from C:/Users/Bayan/Desktop/CompilerProject3/src\dartLexer.g4 by ANTLR 4.10.1
-
+// Generated from C:/Users/Bayan/Desktop/CompilerProjectgitlast/src/antlr\dartLexer.g4 by ANTLR 4.10.1
+package antlr;
+import org.antlr.v4.runtime.Lexer;
+import org.antlr.v4.runtime.CharStream;
+import org.antlr.v4.runtime.Token;
+import org.antlr.v4.runtime.TokenStream;
 import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.atn.ATN;
-import org.antlr.v4.runtime.atn.ATNDeserializer;
-import org.antlr.v4.runtime.atn.LexerATNSimulator;
-import org.antlr.v4.runtime.atn.PredictionContextCache;
+import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
+import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class dartLexer extends Lexer {
@@ -179,7 +181,7 @@ public class dartLexer extends Lexer {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "antlr/dartLexer.g4"; }
+	public String getGrammarFileName() { return "dartLexer.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }

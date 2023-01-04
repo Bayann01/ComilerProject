@@ -1,16 +1,13 @@
-package antlr;// Generated from C:/Users/Bayan/Desktop/CompilerProject3/src\dartParser.g4 by ANTLR 4.10.1
-
-import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.atn.ATN;
-import org.antlr.v4.runtime.atn.ATNDeserializer;
-import org.antlr.v4.runtime.atn.ParserATNSimulator;
-import org.antlr.v4.runtime.atn.PredictionContextCache;
+// Generated from C:/Users/Bayan/Desktop/CompilerProjectgitlast/src/antlr\dartParser.g4 by ANTLR 4.10.1
+package antlr;
+import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
-import org.antlr.v4.runtime.tree.ParseTreeListener;
-import org.antlr.v4.runtime.tree.ParseTreeVisitor;
-import org.antlr.v4.runtime.tree.TerminalNode;
-
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
+import org.antlr.v4.runtime.tree.*;
 import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class dartParser extends Parser {
@@ -171,7 +168,7 @@ public class dartParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "antlr/dartParser.g4"; }
+	public String getGrammarFileName() { return "dartParser.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -253,7 +250,7 @@ public class dartParser extends Parser {
 				setState(122);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,1,_ctx);
-				while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -691,7 +688,7 @@ public class dartParser extends Parser {
 			setState(158);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
@@ -1065,7 +1062,7 @@ public class dartParser extends Parser {
 			setState(209);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,11,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
@@ -1095,7 +1092,7 @@ public class dartParser extends Parser {
 			setState(215);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
@@ -1252,7 +1249,7 @@ public class dartParser extends Parser {
 			setState(247);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,17,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
@@ -1443,7 +1440,7 @@ public class dartParser extends Parser {
 				setState(284);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,21,_ctx);
-				while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -3429,7 +3426,7 @@ public class dartParser extends Parser {
 			setState(542);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,47,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
