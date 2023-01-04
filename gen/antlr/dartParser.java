@@ -1,19 +1,13 @@
-// Generated from C:/Users/Bayan/Desktop/CompilerProject3/src/antlr\dartParser.g4 by ANTLR 4.10.1
-package antlr.antlr;
-
-import antlr.dartParserListener;
-import antlr.dartParserVisitor;
-import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.atn.ATN;
-import org.antlr.v4.runtime.atn.ATNDeserializer;
-import org.antlr.v4.runtime.atn.ParserATNSimulator;
-import org.antlr.v4.runtime.atn.PredictionContextCache;
+// Generated from C:/Users/Bayan/Desktop/CompilerProjectgitlast/src/antlr\dartParser.g4 by ANTLR 4.10.1
+package antlr;
+import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
-import org.antlr.v4.runtime.tree.ParseTreeListener;
-import org.antlr.v4.runtime.tree.ParseTreeVisitor;
-import org.antlr.v4.runtime.tree.TerminalNode;
-
+import org.antlr.v4.runtime.*;
+import org.antlr.v4.runtime.misc.*;
+import org.antlr.v4.runtime.tree.*;
 import java.util.List;
+import java.util.Iterator;
+import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class dartParser extends Parser {
@@ -207,15 +201,15 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_prog; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterProg(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterProg(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitProg(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitProg(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof dartParserVisitor) return ((dartParserVisitor<? extends T>)visitor).visitProg(this);
+			if ( visitor instanceof dartParserVisitor ) return ((dartParserVisitor<? extends T>)visitor).visitProg(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -256,7 +250,7 @@ public class dartParser extends Parser {
 				setState(122);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,1,_ctx);
-				while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -313,11 +307,11 @@ public class dartParser extends Parser {
 		public DOSTATMENTContext(LineContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterDOSTATMENT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterDOSTATMENT(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitDOSTATMENT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitDOSTATMENT(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -332,11 +326,11 @@ public class dartParser extends Parser {
 		public WHILEBLOCKContext(LineContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterWHILEBLOCK(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterWHILEBLOCK(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitWHILEBLOCK(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitWHILEBLOCK(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -351,11 +345,11 @@ public class dartParser extends Parser {
 		public FUNCTIONVOIDContext(LineContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterFUNCTIONVOID(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterFUNCTIONVOID(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitFUNCTIONVOID(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitFUNCTIONVOID(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -370,11 +364,11 @@ public class dartParser extends Parser {
 		public FORBLOCKContext(LineContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterFORBLOCK(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterFORBLOCK(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitFORBLOCK(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitFORBLOCK(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -390,11 +384,11 @@ public class dartParser extends Parser {
 		public STATMENTContext(LineContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterSTATMENT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterSTATMENT(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitSTATMENT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitSTATMENT(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -409,11 +403,11 @@ public class dartParser extends Parser {
 		public FUNNCTIONContext(LineContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterFUNNCTION(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterFUNNCTION(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitFUNNCTION(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitFUNNCTION(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -428,11 +422,11 @@ public class dartParser extends Parser {
 		public ARRAYSContext(LineContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterARRAYS(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterARRAYS(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitARRAYS(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitARRAYS(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -447,11 +441,11 @@ public class dartParser extends Parser {
 		public CLASSDECLERATIONContext(LineContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterCLASSDECLERATION(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterCLASSDECLERATION(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitCLASSDECLERATION(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitCLASSDECLERATION(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -466,11 +460,11 @@ public class dartParser extends Parser {
 		public IFBLOCKContext(LineContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterIFBLOCK(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterIFBLOCK(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitIFBLOCK(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitIFBLOCK(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -587,11 +581,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classDecl; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterClassDecl(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterClassDecl(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitClassDecl(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitClassDecl(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -670,11 +664,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterClassBody(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterClassBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitClassBody(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitClassBody(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -694,7 +688,7 @@ public class dartParser extends Parser {
 			setState(158);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,5,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
@@ -796,11 +790,11 @@ public class dartParser extends Parser {
 		public FACTORYCONSTRUCTORContext(ClassConstructorContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterFACTORYCONSTRUCTOR(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterFACTORYCONSTRUCTOR(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitFACTORYCONSTRUCTOR(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitFACTORYCONSTRUCTOR(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -815,11 +809,11 @@ public class dartParser extends Parser {
 		public NORMALCONSTRUCTORContext(ClassConstructorContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterNORMALCONSTRUCTOR(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterNORMALCONSTRUCTOR(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitNORMALCONSTRUCTOR(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitNORMALCONSTRUCTOR(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -886,11 +880,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_normalConstructor; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterNormalConstructor(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterNormalConstructor(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitNormalConstructor(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitNormalConstructor(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -953,11 +947,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_factoryConstructor; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterFactoryConstructor(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterFactoryConstructor(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitFactoryConstructor(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitFactoryConstructor(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1044,11 +1038,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_constructorBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterConstructorBody(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterConstructorBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitConstructorBody(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitConstructorBody(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1068,7 +1062,7 @@ public class dartParser extends Parser {
 			setState(209);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,11,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
@@ -1098,7 +1092,7 @@ public class dartParser extends Parser {
 			setState(215);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,12,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
@@ -1203,11 +1197,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_factoryConstructorBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterFactoryConstructorBody(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterFactoryConstructorBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitFactoryConstructorBody(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitFactoryConstructorBody(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1255,7 +1249,7 @@ public class dartParser extends Parser {
 			setState(247);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,17,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
@@ -1338,11 +1332,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_optionalParameters; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterOptionalParameters(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterOptionalParameters(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitOptionalParameters(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitOptionalParameters(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1415,11 +1409,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parametersConstructor; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterParametersConstructor(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterParametersConstructor(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitParametersConstructor(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitParametersConstructor(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1446,7 +1440,7 @@ public class dartParser extends Parser {
 				setState(284);
 				_errHandler.sync(this);
 				_alt = getInterpreter().adaptivePredict(_input,21,_ctx);
-				while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+				while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 					if ( _alt==1 ) {
 						{
 						{
@@ -1541,11 +1535,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_constructorName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterConstructorName(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterConstructorName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitConstructorName(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitConstructorName(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1623,11 +1617,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionMain; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterFunctionMain(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterFunctionMain(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitFunctionMain(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitFunctionMain(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1730,11 +1724,11 @@ public class dartParser extends Parser {
 		public DECRERATIONContext(StatmentContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterDECRERATION(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterDECRERATION(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitDECRERATION(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitDECRERATION(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1749,11 +1743,11 @@ public class dartParser extends Parser {
 		public FUNCALLContext(StatmentContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterFUNCALL(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterFUNCALL(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitFUNCALL(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitFUNCALL(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1768,11 +1762,11 @@ public class dartParser extends Parser {
 		public ASSIGNMNETContext(StatmentContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterASSIGNMNET(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterASSIGNMNET(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitASSIGNMNET(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitASSIGNMNET(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1787,11 +1781,11 @@ public class dartParser extends Parser {
 		public VARPLUSPLUSContext(StatmentContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterVARPLUSPLUS(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterVARPLUSPLUS(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitVARPLUSPLUS(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitVARPLUSPLUS(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1806,11 +1800,11 @@ public class dartParser extends Parser {
 		public VARMINUSMINUSContext(StatmentContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterVARMINUSMINUS(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterVARMINUSMINUS(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitVARMINUSMINUS(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitVARMINUSMINUS(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1897,11 +1891,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_ifBlock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterIfBlock(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterIfBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitIfBlock(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitIfBlock(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -1961,11 +1955,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elseifblock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterElseifblock(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterElseifblock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitElseifblock(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitElseifblock(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2026,11 +2020,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_whileBlock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterWhileBlock(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterWhileBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitWhileBlock(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitWhileBlock(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2091,11 +2085,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_forBlock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterForBlock(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterForBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitForBlock(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitForBlock(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2157,11 +2151,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_doStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterDoStatement(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterDoStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitDoStatement(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitDoStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2216,11 +2210,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_datatypes; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterDatatypes(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterDatatypes(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitDatatypes(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitDatatypes(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2284,11 +2278,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_decl; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterDecl(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterDecl(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitDecl(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitDecl(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2370,11 +2364,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_varplusplus; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterVarplusplus(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterVarplusplus(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitVarplusplus(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitVarplusplus(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2432,11 +2426,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_varminusminus; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterVarminusminus(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterVarminusminus(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitVarminusminus(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitVarminusminus(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2496,11 +2490,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_declINT; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterDeclINT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterDeclINT(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitDeclINT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitDeclINT(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2547,11 +2541,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_decldouble; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterDecldouble(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterDecldouble(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitDecldouble(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitDecldouble(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2598,11 +2592,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_declSTRING; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterDeclSTRING(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterDeclSTRING(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitDeclSTRING(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitDeclSTRING(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2649,11 +2643,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_declFLOAT; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterDeclFLOAT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterDeclFLOAT(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitDeclFLOAT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitDeclFLOAT(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2700,11 +2694,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_declbool; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterDeclbool(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterDeclbool(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitDeclbool(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitDeclbool(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2753,11 +2747,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_declVar; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterDeclVar(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterDeclVar(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitDeclVar(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitDeclVar(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2807,11 +2801,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_parametersFUNCTION; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterParametersFUNCTION(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterParametersFUNCTION(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitParametersFUNCTION(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitParametersFUNCTION(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2908,11 +2902,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_assignment; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterAssignment(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterAssignment(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitAssignment(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitAssignment(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -2975,11 +2969,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionVoid; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterFunctionVoid(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterFunctionVoid(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitFunctionVoid(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitFunctionVoid(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3096,11 +3090,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_function; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterFunction(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterFunction(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitFunction(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitFunction(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3207,11 +3201,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_functionCall; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterFunctionCall(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterFunctionCall(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitFunctionCall(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitFunctionCall(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3287,11 +3281,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_boolOPERATIONS; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterBoolOPERATIONS(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterBoolOPERATIONS(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitBoolOPERATIONS(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitBoolOPERATIONS(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3360,11 +3354,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_exprission; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterExprission(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterExprission(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitExprission(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitExprission(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3432,7 +3426,7 @@ public class dartParser extends Parser {
 			setState(542);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,47,_ctx);
-			while ( _alt!=2 && _alt!= ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( _parseListeners!=null ) triggerExitRuleEvent();
 					_prevctx = _localctx;
@@ -3535,11 +3529,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_block; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterBlock(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitBlock(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitBlock(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3602,11 +3596,11 @@ public class dartParser extends Parser {
 		public BoolConstContext(ConstatntContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterBoolConst(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterBoolConst(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitBoolConst(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitBoolConst(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3619,11 +3613,11 @@ public class dartParser extends Parser {
 		public NumberCosntContext(ConstatntContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterNumberCosnt(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterNumberCosnt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitNumberCosnt(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitNumberCosnt(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3636,11 +3630,11 @@ public class dartParser extends Parser {
 		public IntConstContext(ConstatntContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterIntConst(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterIntConst(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitIntConst(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitIntConst(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3653,11 +3647,11 @@ public class dartParser extends Parser {
 		public StringConstContext(ConstatntContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterStringConst(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterStringConst(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitStringConst(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitStringConst(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3742,11 +3736,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_arrays; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterArrays(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterArrays(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitArrays(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitArrays(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3838,11 +3832,11 @@ public class dartParser extends Parser {
 		public ArrayIntegerContext(ArrayContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterArrayInteger(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterArrayInteger(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitArrayInteger(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitArrayInteger(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3867,11 +3861,11 @@ public class dartParser extends Parser {
 		public ArrayStringContext(ArrayContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterArrayString(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterArrayString(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitArrayString(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitArrayString(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3896,11 +3890,11 @@ public class dartParser extends Parser {
 		public ArrayBoolContext(ArrayContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterArrayBool(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterArrayBool(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitArrayBool(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitArrayBool(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -3926,11 +3920,11 @@ public class dartParser extends Parser {
 		public ArrayDoubleContext(ArrayContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterArrayDouble(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterArrayDouble(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitArrayDouble(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitArrayDouble(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -4132,11 +4126,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_queue; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterQueue(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterQueue(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitQueue(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitQueue(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -4232,11 +4226,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_stack; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterStack(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterStack(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitStack(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitStack(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -4324,11 +4318,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_list; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterList(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitList(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitList(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -4405,11 +4399,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_addlist_queue_stack; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterAddlist_queue_stack(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterAddlist_queue_stack(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitAddlist_queue_stack(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitAddlist_queue_stack(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -4486,11 +4480,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_queueINT; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterQueueINT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterQueueINT(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitQueueINT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitQueueINT(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -4572,11 +4566,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_queueDOUBLE; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterQueueDOUBLE(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterQueueDOUBLE(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitQueueDOUBLE(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitQueueDOUBLE(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -4658,11 +4652,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_queueSTRING; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterQueueSTRING(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterQueueSTRING(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitQueueSTRING(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitQueueSTRING(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -4744,11 +4738,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_queueFLOAT; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterQueueFLOAT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterQueueFLOAT(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitQueueFLOAT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitQueueFLOAT(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -4830,11 +4824,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_queueBOOL; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterQueueBOOL(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterQueueBOOL(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitQueueBOOL(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitQueueBOOL(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -4916,11 +4910,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_queueVAR; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterQueueVAR(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterQueueVAR(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitQueueVAR(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitQueueVAR(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -5002,11 +4996,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_stackINT; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterStackINT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterStackINT(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitStackINT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitStackINT(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -5088,11 +5082,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_stackDOUBLE; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterStackDOUBLE(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterStackDOUBLE(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitStackDOUBLE(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitStackDOUBLE(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -5192,11 +5186,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_stackSTRING; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterStackSTRING(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterStackSTRING(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitStackSTRING(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitStackSTRING(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -5296,11 +5290,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_stackFLOAT; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterStackFLOAT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterStackFLOAT(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitStackFLOAT(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitStackFLOAT(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -5400,11 +5394,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_stackBOOL; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterStackBOOL(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterStackBOOL(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).exitStackBOOL(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitStackBOOL(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
@@ -5504,11 +5498,11 @@ public class dartParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_stackVAR; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((antlr.dartParserListener)listener).enterStackVAR(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).enterStackVAR(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof antlr.dartParserListener) ((dartParserListener)listener).exitStackVAR(this);
+			if ( listener instanceof dartParserListener ) ((dartParserListener)listener).exitStackVAR(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
