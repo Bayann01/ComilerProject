@@ -1,7 +1,7 @@
 package Visitor;
 
 
-import AST.*;
+import program.*;
 import antlr.dartParser;
 import antlr.dartParserBaseVisitor;
 import org.antlr.v4.runtime.Token;
@@ -83,13 +83,13 @@ class TestVisitor extends dartParserBaseVisitor {
         return b;
     }
 
-    @Override
-    public decleration visitDeclVar(dartParser.DeclVarContext ctx) {
-        String id = ctx.IDENTIFIER().getText();
-        String type = ctx.VARTYPE().getText();
-        ctx.
-
-    }
+ //   @Override
+//    public decleration visitDeclVar(dartParser.DeclVarContext ctx) {
+//        String id = ctx.IDENTIFIER().getText();
+//        String type = ctx.VARTYPE().getText();
+//        ctx.
+//
+//    }
 
     @Override
     public Array visitArrayInteger(dartParser.ArrayIntegerContext ctx) {
