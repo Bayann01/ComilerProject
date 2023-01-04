@@ -98,22 +98,29 @@ exprission: constatnt
           |exprission boolOPERATIONS  exprission
            ;
 block : OBC line* CBC;
-constatnt : NUMBER
-          |BOOL
-          |VAR_
-          |SingleLineString
-          |NULL_
-          | INT
-          ;
+
+
+constatnt : NUMBER                         #numberCosnt
+          | BOOL                           #boolConst
+          | SingleLineString               #stringConst
+          //| NULL_                          #nullConst
+          | INT                            #intConst;
+
 arrays:array | list | queue |addlist_queue_stack | stack ;
-array: arrayINT |arrayDOUBLE |arraySTRING |arrayVAR | arrayBOOL  ;
+//array: arrayINT |arrayDOUBLE |arraySTRING |arrayVAR | arrayBOOL  ;
+
+array : INTTYPE IDENTIFIER EQ OB INT (C INT)* CB                                          #arrayInteger
+      | (DOUBLETYPE|FLOATTYPE) IDENTIFIER EQ OB NUMBER (C NUMBER)* CB                     #arrayDouble
+      | STRINGTYPE IDENTIFIER EQ OB SingleLineString (C SingleLineString)* CB             #arrayString
+      | BOOLTYPE IDENTIFIER EQ OB BOOL (C BOOL)* CB                                       #arrayBool;
+
 queue:queueINT |queueDOUBLE |queueSTRING | queueFLOAT| queueBOOL |queueVAR ;
 stack:stackINT |stackDOUBLE |stackSTRING | stackFLOAT| stackBOOL |stackVAR ;
-arrayINT:INTTYPE IDENTIFIER EQ OB INT (C INT)* CB  ;
-arrayDOUBLE:(DOUBLETYPE|FLOATTYPE) IDENTIFIER EQ OB NUMBER (C NUMBER)* CB ;
-arraySTRING :STRINGTYPE IDENTIFIER EQ OB SingleLineString (C SingleLineString)* CB ;
-arrayVAR:VARTYPE IDENTIFIER EQ OB constatnt (C constatnt)* CB ;
-arrayBOOL:BOOLTYPE IDENTIFIER EQ OB BOOL (C BOOL)* CB ;
+//arrayINT:INTTYPE IDENTIFIER EQ OB INT (C INT)* CB  ;
+//arrayDOUBLE:(DOUBLETYPE|FLOATTYPE) IDENTIFIER EQ OB NUMBER (C NUMBER)* CB ;
+//arraySTRING :STRINGTYPE IDENTIFIER EQ OB SingleLineString (C SingleLineString)* CB ;
+//arrayVAR:VARTYPE IDENTIFIER EQ OB constatnt (C constatnt)* CB ;
+//arrayBOOL:BOOLTYPE IDENTIFIER EQ OB BOOL (C BOOL)* CB ;
 list:datatypes IDENTIFIER EQ NEW_ LIST (OP CP | OP INT CP) ;
 addlist_queue_stack : IDENTIFIER D ADD_ OP (INT|DOUBLE|STRING|BOOL|VAR) CP ;
 queueINT: QUEUE LT INTTYPE GT IDENTIFIER EQ NEW_ QUEUE LT INTTYPE GT OP CP ;

@@ -8,12 +8,14 @@ import org.antlr.v4.runtime.Token;
 
 class TestVisitor extends dartParserBaseVisitor {
 
-    @Override
-    public Constant visitNumberCosnt(dartParser.NumberCosntContext ctx) {
-        double value = Double.parseDouble(ctx.NUMBER().toString());
-        NumberConst n = new NumberConst(value);
-        return n;
-    }
+
+
+//    @Override
+//    public Constant visitNumberCosnt(dartParser.NumberCosntContext ctx) {
+//        double value = Double.parseDouble(ctx.NUMBER().toString());
+//        NumberConst n = new NumberConst(value);
+//        return n;
+//    }
 
     @Override
     public Constant visitBoolConst(dartParser.BoolConstContext ctx) {
