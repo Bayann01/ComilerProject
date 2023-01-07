@@ -36,7 +36,7 @@ statment :  decl          // #DECRERATION
             | functionCall// #FUNCALL
             | varplusplus // #VARPLUSPLUS
             |varminusminus// #VARMINUSMINUS
-             ;
+            ;
 ifBlock : IF_ exprission  block  (ELSE_  elseifblock )? ;
 elseifblock : block
             | ifBlock ;
