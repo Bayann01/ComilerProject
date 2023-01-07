@@ -92,7 +92,7 @@ exprission:constatnt    #constatntt
           |functionCall  #funcCall
           |NOT exprission #notExprition
           |exprission ST exprission #expmulexpr
-          |OP exprission CP #expr
+          |OP exprission CP #exprOPCP
           |exprission PL exprission #exprplusexpr
           |exprission SL exprission #exprminusexpr
           |exprission MINUS exprission   #exprminusexpr
