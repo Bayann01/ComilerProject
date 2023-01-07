@@ -1,4 +1,3 @@
 package program;
-
-abstract public class line extends prog{
+ public class line extends prog{
 }

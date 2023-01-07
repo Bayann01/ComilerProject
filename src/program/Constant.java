@@ -1,4 +1,4 @@
 package program;
 
-abstract public class Constant {
+ public class Constant extends exprission {
 }

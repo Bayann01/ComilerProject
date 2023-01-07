@@ -3,22 +3,24 @@ options { tokenVocab= dartLexer ; }
 prog :  functionMain line*
         | line* functionMain
         |functionMain
-         EOF ;
-line :   statment SC   #STATMENT
-        | ifBlock      #IFBLOCK
-        | whileBlock   #WHILEBLOCK
-        |function      #FUNNCTION
-        | functionVoid #FUNCTIONVOID
-        | forBlock     #FORBLOCK
-        | doStatement  #DOSTATMENT
-        |arrays        #ARRAYS
-        |classDecl     #CLASSDECLERATION
+        |line
+
+         ;
+line :   statment SC    //#STATMENT
+        |ifBlock      //#IFBLOCK
+        |whileBlock  // #WHILEBLOCK
+        |function      //#FUNNCTION
+        |functionVoid// #FUNCTIONVOID
+        |forBlock    // #FORBLOCK
+        |doStatement // #DOSTATMENT
+        |array      // #ARRAYS
+        |classDecl    // #CLASSDECLERATION
         ;
 ///////////////////////////////////////////////////////////
 classDecl: CLASS_ IDENTIFIER OBC classBody CBC;
 classBody: ((parametersFUNCTION | decl) SC)* (classConstructor)* (function)* (functionVoid)*;
-classConstructor: normalConstructor    #NORMALCONSTRUCTOR
-                 | factoryConstructor  #FACTORYCONSTRUCTOR
+classConstructor: normalConstructor   // #NORMALCONSTRUCTOR
+                 | factoryConstructor//  #FACTORYCONSTRUCTOR
                  ;
 normalConstructor: constructorName OP parametersConstructor CP OBC constructorBody CBC;
 factoryConstructor: FACTORY_ constructorName OP parametersConstructor CP OBC factoryConstructorBody CBC;
@@ -29,11 +31,11 @@ parametersConstructor: ( parametersFUNCTION (C parametersFUNCTION)* ) (C optiona
 constructorName: IDENTIFIER (D IDENTIFIER)?;
 ////////////////////////////////////////////////////////
 functionMain:  VOID_ Main OP (datatypes exprission( C datatypes exprission)*)? CP OBC line* CBC;
-statment :  decl          #DECRERATION
-            | assignment   #ASSIGNMNET
-            | functionCall #FUNCALL
-            | varplusplus  #VARPLUSPLUS
-            |varminusminus #VARMINUSMINUS
+statment :  decl          // #DECRERATION
+            | assignment  // #ASSIGNMNET
+            | functionCall// #FUNCALL
+            | varplusplus // #VARPLUSPLUS
+            |varminusminus// #VARMINUSMINUS
              ;
 ifBlock : IF_ exprission  block  (ELSE_  elseifblock )? ;
 elseifblock : block
@@ -72,7 +74,7 @@ parametersFUNCTION :  INTTYPE IDENTIFIER
                    |  BOOLTYPE IDENTIFIER
                    | VARTYPE IDENTIFIER
                    ;
-assignment :   IDENTIFIER EQ exprission ;
+assignment :  IDENTIFIER EQ exprission ;
 functionVoid: VOID_ IDENTIFIER OP (parametersFUNCTION (C parametersFUNCTION)*)? CP OBC line* CBC;
 function: datatypes IDENTIFIER OP (parametersFUNCTION( C parametersFUNCTION)*)? CP OBC line* RETURN_ IDENTIFIER SC CBC;
 functionCall : IDENTIFIER OP (exprission( C exprission)*)? CP;
@@ -86,27 +88,26 @@ boolOPERATIONS : EE
                |LTLTE
                |NE
                ;
-exprission: constatnt
-          | functionCall
-          | NOT exprission
-          | exprission ST exprission
-          |OP exprission CP
-          | exprission PL exprission
-          |exprission SL exprission
-          | exprission MINUS exprission
-          | IDENTIFIER
-          |exprission boolOPERATIONS  exprission
-           ;
+exprission:constatnt    #constatntt
+          |functionCall  #funcCall
+          |NOT exprission #notExprition
+          |exprission ST exprission #expmulexpr
+          |OP exprission CP #expr
+          |exprission PL exprission #exprplusexpr
+          |exprission SL exprission #exprminusexpr
+          |exprission MINUS exprission   #exprminusexpr
+          |exprission boolOPERATIONS  exprission #exprboolexpr
+          |IDENTIFIER #identifier
+          ;
 block : OBC line* CBC;
 
 
 constatnt : NUMBER                         #numberCosnt
           | BOOL                           #boolConst
           | SingleLineString               #stringConst
-          //| NULL_                          #nullConst
           | INT                            #intConst;
 
-arrays:array | list | queue |addlist_queue_stack | stack ;
+//arrays:array | list | queue |addlist_queue_stack | stack ;
 //array: arrayINT |arrayDOUBLE |arraySTRING |arrayVAR | arrayBOOL  ;
 
 array : INTTYPE IDENTIFIER EQ OB INT (C INT)* CB                                          #arrayInteger
