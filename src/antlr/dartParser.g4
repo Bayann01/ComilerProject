@@ -5,7 +5,7 @@ prog :  functionMain line*
         |functionMain
         |line*
          ;
-line :   statment SC    // #statement
+line :  statment SC    // #statement
         |ifBlock        // #ifblock
         |whileBlock     // #whileblock
         |function       // #functionn

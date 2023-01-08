@@ -81,7 +81,6 @@ public class TestVisitor extends dartParserBaseVisitor {
 
     @Override
     public exprission visitExprOPCP(dartParser.ExprOPCPContext ctx) {
-
         return (exprission) super.visitExprOPCP(ctx);
     }
 
@@ -154,13 +153,12 @@ public class TestVisitor extends dartParserBaseVisitor {
         return ID;
     }
 
-    @Override
-    public Object visitLine(dartParser.LineContext ctx) {
-        statmnet dec = (statmnet) visit(ctx.statment());
-        line line = new line();
-        line.addline(dec);
-        return line;
-    }
+//    public Object visitLine(dartParser.LineContext ctx) {
+//        statmnet dec = (statmnet) visit(ctx.statment());
+//        line line = new line();
+//        line.addline(dec);
+//        return line;
+//    }
 
     @Override
     public Object visitProg(dartParser.ProgContext ctx) {
@@ -173,37 +171,38 @@ public class TestVisitor extends dartParserBaseVisitor {
     }
 
     public line visitIfBlock(dartParser.IfBlockContext ctx) {
-        exprission exp = (exprission) visit(ctx.exprission().getChild(0));
+        exprission exp = (exprission) visit(ctx.exprission().getChild(1));
         ifBlock e = new ifBlock(exp);
         for (int i = 0; i < ctx.block().line().size(); i++) {
             line lines = (line) visit(ctx.block().line().get(i));
-            e.addline((statmnet) lines);
+            e.addline(lines);
         }
         return e;
     }
 
     @Override
     public exprission visitExprminusexpr(dartParser.ExprminusexprContext ctx) {
-        exprission expr1=(exprission) visit(  ctx.exprission().get(0));
-        exprission expr2=(exprission) visit( ctx.exprission().get(1));
-        minusproc e= new minusproc(expr1,expr2);
+        exprission expr1 = (exprission) visit(ctx.exprission().get(0));
+        exprission expr2 = (exprission) visit(ctx.exprission().get(1));
+        minusproc e = new minusproc(expr1, expr2);
         return e;
     }
 
     @Override
     public exprission visitExpmulexpr(dartParser.ExpmulexprContext ctx) {
-        exprission expr1=(exprission) visit(  ctx.exprission().get(0));
-        exprission expr2=(exprission) visit( ctx.exprission().get(1));
-        multiproc e= new multiproc(expr1,expr2);
+        exprission expr1 = (exprission) visit(ctx.exprission().get(0));
+        exprission expr2 = (exprission) visit(ctx.exprission().get(1));
+        multiproc e = new multiproc(expr1, expr2);
         return e;
     }
 
     @Override
     public exprission visitExprboolexpr(dartParser.ExprboolexprContext ctx) {
-        exprission expr1=(exprission) visit(  ctx.exprission().get(0));
-        exprission expr2=(exprission) visit( ctx.exprission().get(1));
-        booloperation e= new booloperation(expr1,expr2);
-        return e;}
+        exprission expr1 = (exprission) visit(ctx.exprission().get(0));
+        exprission expr2 = (exprission) visit(ctx.exprission().get(1));
+        booloperation e = new booloperation(expr1, expr2);
+        return e;
+    }
 
 //    @Override
 //    public Object visitBlock(dartParser.BlockContext ctx) {
@@ -215,9 +214,13 @@ public class TestVisitor extends dartParserBaseVisitor {
 //        return super.visitBlock(ctx);
 //    }
 
-    @Override
-    public Object visitStatment(dartParser.StatmentContext ctx) {
-        return super.visitStatment(ctx);
-    }
+//    @Override
+//    public Object visitStatment(dartParser.StatmentContext ctx) {
+//        statmnet dec = (statmnet) visit(ctx);
+//        line line = new line();
+//        line.addline(dec);
+//        return line;
+//    }
+
 }
 

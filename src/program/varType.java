@@ -5,5 +5,4 @@ public class varType {
     double valdouble;
     boolean valbool;
     String valstring ;
-
 }

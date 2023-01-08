@@ -346,18 +346,6 @@ public interface dartParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitArrayBool(dartParser.ArrayBoolContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link dartParser#queue}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitQueue(dartParser.QueueContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#stack}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStack(dartParser.StackContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link dartParser#list}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -369,76 +357,4 @@ public interface dartParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitAddlist_queue_stack(dartParser.Addlist_queue_stackContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#queueINT}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitQueueINT(dartParser.QueueINTContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#queueDOUBLE}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitQueueDOUBLE(dartParser.QueueDOUBLEContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#queueSTRING}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitQueueSTRING(dartParser.QueueSTRINGContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#queueFLOAT}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitQueueFLOAT(dartParser.QueueFLOATContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#queueBOOL}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitQueueBOOL(dartParser.QueueBOOLContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#queueVAR}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitQueueVAR(dartParser.QueueVARContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#stackINT}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStackINT(dartParser.StackINTContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#stackDOUBLE}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStackDOUBLE(dartParser.StackDOUBLEContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#stackSTRING}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStackSTRING(dartParser.StackSTRINGContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#stackFLOAT}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStackFLOAT(dartParser.StackFLOATContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#stackBOOL}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStackBOOL(dartParser.StackBOOLContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link dartParser#stackVAR}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStackVAR(dartParser.StackVARContext ctx);
 }
