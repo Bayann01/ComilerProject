@@ -1,4 +1,4 @@
 package program;
 
-public class decleration extends line {
+public class decleration extends statmnet {
 }

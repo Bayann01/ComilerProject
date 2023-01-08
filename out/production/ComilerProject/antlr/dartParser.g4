@@ -1,9 +1,9 @@
 parser grammar dartParser;
 options { tokenVocab= dartLexer ; }
 prog :  functionMain line*
-        | line* functionMain
+        |line* functionMain
         |functionMain
-        |line
+        |line*
          ;
 line :   statment SC    // #statement
         |ifBlock        // #ifblock
@@ -36,7 +36,7 @@ statment :decl            // #decleration
          |varplusplus     // #varplusplusDec
          |varminusminus   // #varminusminusDec
          ;
-ifBlock : IF_ exprission  block  (ELSE_  elseifblock )? ;
+ifBlock : IF_ exprission block (ELSE_  elseifblock )? ;
 elseifblock : block
             | ifBlock ;
 whileBlock : WHILE_ OP exprission  CP block ;
@@ -105,31 +105,10 @@ constatnt : NUMBER                         #numberCosnt
           | SingleLineString               #stringConst
           | INT                            #intConst;
 
-//arrays:array | list | queue |addlist_queue_stack | stack ;
-//array: arrayINT |arrayDOUBLE |arraySTRING |arrayVAR | arrayBOOL  ;
-
 array : INTTYPE IDENTIFIER EQ OB INT (C INT)* CB                                          #arrayInteger
       | (DOUBLETYPE|FLOATTYPE) IDENTIFIER EQ OB NUMBER (C NUMBER)* CB                     #arrayDouble
       | STRINGTYPE IDENTIFIER EQ OB SingleLineString (C SingleLineString)* CB             #arrayString
       | BOOLTYPE IDENTIFIER EQ OB BOOL (C BOOL)* CB                                       #arrayBool;
-
-queue:queueINT |queueDOUBLE |queueSTRING | queueFLOAT| queueBOOL |queueVAR ;
-stack:stackINT |stackDOUBLE |stackSTRING | stackFLOAT| stackBOOL |stackVAR ;
-//arrayINT:INTTYPE IDENTIFIER EQ OB INT (C INT)* CB  ;
-//arrayDOUBLE:(DOUBLETYPE|FLOATTYPE) IDENTIFIER EQ OB NUMBER (C NUMBER)* CB ;
-//arraySTRING :STRINGTYPE IDENTIFIER EQ OB SingleLineString (C SingleLineString)* CB ;
-//arrayBOOL:BOOLTYPE IDENTIFIER EQ OB BOOL (C BOOL)* CB ;
 list:datatypes IDENTIFIER EQ NEW_ LIST (OP CP | OP INT CP) ;
 addlist_queue_stack : IDENTIFIER D ADD_ OP (INT|DOUBLE|STRING|BOOL|VAR) CP ;
-queueINT: QUEUE LT INTTYPE GT IDENTIFIER EQ NEW_ QUEUE LT INTTYPE GT OP CP ;
-queueDOUBLE: QUEUE LT DOUBLETYPE GT IDENTIFIER EQ NEW_ QUEUE LT DOUBLETYPE GT OP CP ;
-queueSTRING:QUEUE LT STRINGTYPE GT IDENTIFIER EQ NEW_ QUEUE LT STRINGTYPE GT OP CP ;
-queueFLOAT:QUEUE LT FLOATTYPE GT IDENTIFIER EQ NEW_ QUEUE LT FLOATTYPE GT OP CP ;
-queueBOOL:QUEUE LT BOOLTYPE GT IDENTIFIER EQ NEW_ QUEUE LT BOOLTYPE GT OP CP ;
-queueVAR:QUEUE LT VARTYPE GT IDENTIFIER EQ NEW_ QUEUE LT VARTYPE GT OP CP ;
-stackINT:STACK_ LT INTTYPE GT IDENTIFIER EQ NEW_ STACK_  LT INTTYPE GT OP CP ;
-stackDOUBLE:STACK_ LT DOUBLETYPE GT IDENTIFIER EQ NEW_ STACK_ (OP CP |  LT DOUBLETYPE GT OP CP );
-stackSTRING:STACK_ LT STRINGTYPE GT IDENTIFIER EQ NEW_ STACK_ (OP CP |  LT STRINGTYPE GT OP CP );
-stackFLOAT:STACK_ LT FLOATTYPE GT IDENTIFIER EQ NEW_ STACK_ (OP CP |  LT FLOATTYPE GT OP CP );
-stackBOOL:STACK_ LT  BOOLTYPE GT IDENTIFIER EQ NEW_ STACK_ (OP CP |  LT  BOOLTYPE GT OP CP );
-stackVAR:STACK_ LT  VARTYPE GT IDENTIFIER EQ NEW_ STACK_ (OP CP |  LT  VARTYPE GT OP CP );
+

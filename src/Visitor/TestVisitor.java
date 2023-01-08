@@ -3,7 +3,6 @@ package Visitor;
 
 import antlr.dartParser;
 import antlr.dartParserBaseVisitor;
-import org.antlr.v4.runtime.tree.ParseTree;
 import program.*;
 
 public class TestVisitor extends dartParserBaseVisitor {
@@ -157,16 +156,68 @@ public class TestVisitor extends dartParserBaseVisitor {
 
     @Override
     public Object visitLine(dartParser.LineContext ctx) {
-        decleration dec = (decleration) visit(ctx.statment().decl());
+        statmnet dec = (statmnet) visit(ctx.statment());
         line line = new line();
         line.addline(dec);
-        System.out.println("line");
         return line;
     }
 
     @Override
     public Object visitProg(dartParser.ProgContext ctx) {
-        return super.visitProg(ctx);
+        prog p = new prog();
+        for (int i = 0; i < ctx.line().size(); i++) {
+            line lines = (line) visit(ctx.line().get(i));
+            p.addChild(lines);
+        }
+        return p;
+    }
+
+    public line visitIfBlock(dartParser.IfBlockContext ctx) {
+        exprission exp = (exprission) visit(ctx.exprission().getChild(0));
+        ifBlock e = new ifBlock(exp);
+        for (int i = 0; i < ctx.block().line().size(); i++) {
+            line lines = (line) visit(ctx.block().line().get(i));
+            e.addline((statmnet) lines);
+        }
+        return e;
+    }
+
+    @Override
+    public exprission visitExprminusexpr(dartParser.ExprminusexprContext ctx) {
+        exprission expr1=(exprission) visit(  ctx.exprission().get(0));
+        exprission expr2=(exprission) visit( ctx.exprission().get(1));
+        minusproc e= new minusproc(expr1,expr2);
+        return e;
+    }
+
+    @Override
+    public exprission visitExpmulexpr(dartParser.ExpmulexprContext ctx) {
+        exprission expr1=(exprission) visit(  ctx.exprission().get(0));
+        exprission expr2=(exprission) visit( ctx.exprission().get(1));
+        multiproc e= new multiproc(expr1,expr2);
+        return e;
+    }
+
+    @Override
+    public exprission visitExprboolexpr(dartParser.ExprboolexprContext ctx) {
+        exprission expr1=(exprission) visit(  ctx.exprission().get(0));
+        exprission expr2=(exprission) visit( ctx.exprission().get(1));
+        booloperation e= new booloperation(expr1,expr2);
+        return e;}
+
+//    @Override
+//    public Object visitBlock(dartParser.BlockContext ctx) {
+//        block e = new block();
+//        for (int i = 0; i < ctx.; i++) {
+//            line lines = (line) visit(ctx.block().line().get(i));
+//            e.addline((statmnet) lines);
+//        }
+//        return super.visitBlock(ctx);
+//    }
+
+    @Override
+    public Object visitStatment(dartParser.StatmentContext ctx) {
+        return super.visitStatment(ctx);
     }
 }
 

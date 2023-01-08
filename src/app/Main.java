@@ -9,6 +9,7 @@ import org.antlr.v4.runtime.CommonTokenStream;
 import program.assignment;
 import program.exprission;
 import program.line;
+import program.prog;
 
 import java.io.IOException;
 
@@ -21,9 +22,9 @@ public class Main {
         dartLexer lexer = new dartLexer(charStream);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         dartParser parser = new dartParser(tokens);
-        dartParser.LineContext ast = parser.line();
+        dartParser.ProgContext ast = parser.prog();
         TestVisitor visitor = new TestVisitor();
-        line program = (line) visitor.visit(ast);
+        prog program = (prog) visitor.visit(ast);
         System.out.println(program);
     }
 }

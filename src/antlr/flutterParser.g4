@@ -55,8 +55,6 @@ textFieldOnChangedProperty
     ;
 
 ////////////image///////////////////
-/////////////////////////////////////
-//////////////////////////////
 image:Image_ '('  (imageProperties ',')+   ')';
 imageProperties
     : imageproperty

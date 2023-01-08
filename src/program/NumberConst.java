@@ -10,7 +10,8 @@ public class NumberConst extends Constant{
 
     @Override
     public String toString() {
-        return new Double(num).toString();
+        return "NumberConst{" +
+                "num=" + num +
+                '}';
     }
-
 }
