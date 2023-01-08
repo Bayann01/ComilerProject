@@ -8,6 +8,7 @@ public class ifBlock extends line{
     exprission exprission;
 
     public ifBlock(exprission exprission) {
+
         this.exprission=exprission;
         line=new  ArrayList<>();
     }

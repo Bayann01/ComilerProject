@@ -1,4 +1,6 @@
- int i =0 ;
- if(i==0){
-
- }
+void main(){
+int j =0;
+if(i==0){
+int k =0;
+}
+}

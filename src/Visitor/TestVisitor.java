@@ -154,17 +154,32 @@ public class TestVisitor extends dartParserBaseVisitor {
     }
 
 //    public Object visitLine(dartParser.LineContext ctx) {
-//        statmnet dec = (statmnet) visit(ctx.statment());
-//        line line = new line();
-//        line.addline(dec);
-//        return line;
+//        prog p = new prog();
+//        line dec;
+//        for (int i = 0; i < ctx.children.size(); i++) {
+//            if (ctx.getChild(i).equals(ctx.statment())) {
+//                dec = (line) visit(ctx.statment());
+//                p.addChild(dec);
+//                //System.out.println(dec);
+//                continue;
+//            }
+//            if (ctx.getChild(i).equals(ctx.ifBlock()) ) {
+//                dec = (line) visit(ctx.ifBlock());
+//                p.addChild(dec);
+//               // System.out.println(dec);
+//            }
+//        }
+//        return p;
+//
+//
 //    }
 
     @Override
     public Object visitProg(dartParser.ProgContext ctx) {
-        prog p = new prog();
+        prog p = new prog((mainFunction) visit(ctx.functionMain()));
+       // p.addMain((mainFunction) visit(ctx.functionMain()));
         for (int i = 0; i < ctx.line().size(); i++) {
-            line lines = (line) visit(ctx.line().get(i));
+            line lines = (line) visit(ctx.getChild(i));
             p.addChild(lines);
         }
         return p;
@@ -204,23 +219,20 @@ public class TestVisitor extends dartParserBaseVisitor {
         return e;
     }
 
-//    @Override
-//    public Object visitBlock(dartParser.BlockContext ctx) {
-//        block e = new block();
-//        for (int i = 0; i < ctx.; i++) {
-//            line lines = (line) visit(ctx.block().line().get(i));
-//            e.addline((statmnet) lines);
-//        }
-//        return super.visitBlock(ctx);
-//    }
+    @Override
+    public Object visitFunctionMain(dartParser.FunctionMainContext ctx) {
+        mainFunction m = new mainFunction( );
 
-//    @Override
-//    public Object visitStatment(dartParser.StatmentContext ctx) {
-//        statmnet dec = (statmnet) visit(ctx);
-//        line line = new line();
-//        line.addline(dec);
-//        return line;
-//    }
+        for (dartParser.ExprissionContext expr : ctx.exprission()) {
+            m.addExpr((exprission) visit(expr));
+        }
 
+        for (dartParser.LineContext line : ctx.line()) {
+            m.addLine((line) visit(line));
+        }
+
+        return m;
+
+    }
 }
 
