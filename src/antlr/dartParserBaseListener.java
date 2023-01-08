@@ -508,18 +508,6 @@ public class dartParserBaseListener implements dartParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterExpr(dartParser.ExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitExpr(dartParser.ExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterFuncCall(dartParser.FuncCallContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -539,6 +527,18 @@ public class dartParserBaseListener implements dartParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitExpmulexpr(dartParser.ExpmulexprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterExprOPCP(dartParser.ExprOPCPContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitExprOPCP(dartParser.ExprOPCPContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

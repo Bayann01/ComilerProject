@@ -3,6 +3,7 @@ package Visitor;
 
 import antlr.dartParser;
 import antlr.dartParserBaseVisitor;
+import org.antlr.v4.runtime.tree.ParseTree;
 import program.*;
 
 public class TestVisitor extends dartParserBaseVisitor {
@@ -33,12 +34,6 @@ public class TestVisitor extends dartParserBaseVisitor {
         IntegerConst i = new IntegerConst(value);
         return i;
     }
-
-//    @Override
-//    public Object visitConstatntt(dartParser.ConstatnttContext ctx) {
-//
-//        return super.visitConstatntt(ctx);
-//    }
 
     @Override
     public decleration visitDeclINT(dartParser.DeclINTContext ctx) {
@@ -85,16 +80,10 @@ public class TestVisitor extends dartParserBaseVisitor {
         return b;
     }
 
-    //   @Override
-//    public decleration visitDeclVar(dartParser.DeclVarContext ctx) {
-//        String id = ctx.IDENTIFIER().getText();
-//        String type = ctx.VARTYPE().getText();
-//        ctx.
-//
-//    }
     @Override
-    public Object visitExpr(dartParser.ExprContext ctx) {
-        return super.visitExpr(ctx);
+    public exprission visitExprOPCP(dartParser.ExprOPCPContext ctx) {
+
+        return (exprission) super.visitExprOPCP(ctx);
     }
 
     @Override
@@ -134,15 +123,50 @@ public class TestVisitor extends dartParserBaseVisitor {
         return booleans;
     }
 
-
     @Override
     public statmnet visitAssignment(dartParser.AssignmentContext ctx) {
         String id = ctx.IDENTIFIER().getText();
-        String value = ctx.exprission().getText();
-        assignment a =new assignment(id,value);
+        exprission value = (exprission) visit(ctx.exprission());
+        assignment a = new assignment(id, value);
         return a;
     }
 
+    @Override
+    public exprission visitFunctionCall(dartParser.FunctionCallContext ctx) {
+        functioncall c = new functioncall(ctx.IDENTIFIER().getText());
+        for (dartParser.ExprissionContext expression : ctx.exprission()) {
+            c.addparameter((exprission) visit(expression));
+        }
+        return c;
+    }
 
+    @Override
+    public exprission visitExprplusexpr(dartParser.ExprplusexprContext ctx) {
+        exprission ex1 = (exprission) visit(ctx.exprission().get(0));
+        exprission ex2 = (exprission) visit(ctx.exprission().get(1));
+        addproc addproc = new addproc(ex1, ex2);
+        return addproc;
+    }
+
+    @Override
+    public Object visitIdentifier(dartParser.IdentifierContext ctx) {
+        String id = ctx.IDENTIFIER().getText();
+        identifier ID = new identifier(id);
+        return ID;
+    }
+
+    @Override
+    public Object visitLine(dartParser.LineContext ctx) {
+        decleration dec = (decleration) visit(ctx.statment().decl());
+        line line = new line();
+        line.addline(dec);
+        System.out.println("line");
+        return line;
+    }
+
+    @Override
+    public Object visitProg(dartParser.ProgContext ctx) {
+        return super.visitProg(ctx);
+    }
 }
 

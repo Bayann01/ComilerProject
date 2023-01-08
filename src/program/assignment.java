@@ -5,10 +5,8 @@ import antlr.dartParser;
 public class assignment extends statmnet {
     public String ID;
 
-    public String value;
-
-
-    public assignment(String ID, String value) {
+    public exprission value;
+    public assignment(String ID, exprission value) {
         this.ID = ID;
 
         this.value = value;

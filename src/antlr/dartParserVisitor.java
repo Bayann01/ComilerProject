@@ -263,13 +263,6 @@ public interface dartParserVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitConstatntt(dartParser.ConstatnttContext ctx);
 	/**
-	 * Visit a parse tree produced by the {@code expr}
-	 * labeled alternative in {@link dartParser#exprission}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExpr(dartParser.ExprContext ctx);
-	/**
 	 * Visit a parse tree produced by the {@code funcCall}
 	 * labeled alternative in {@link dartParser#exprission}.
 	 * @param ctx the parse tree
@@ -283,6 +276,13 @@ public interface dartParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitExpmulexpr(dartParser.ExpmulexprContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code exprOPCP}
+	 * labeled alternative in {@link dartParser#exprission}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExprOPCP(dartParser.ExprOPCPContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link dartParser#block}.
 	 * @param ctx the parse tree

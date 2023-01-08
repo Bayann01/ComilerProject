@@ -4,17 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class functioncall extends exprission{
+    String name ;
     List<exprission> parameters ;
 
-    public functioncall() {
+
+    public functioncall(String name) {
         this.parameters = new ArrayList<>();
+        this.name = name;
     }
-    void addparameter (exprission expr){
+   public void addparameter (exprission expr){
       this.parameters.add(expr);
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        return "functioncall{" +
+                "name='" + name + '\'' +
+                ", parameters=" + parameters +
+                '}';
     }
+
 }

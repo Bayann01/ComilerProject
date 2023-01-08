@@ -9,6 +9,8 @@ public class identifier extends exprission{
 
     @Override
     public String toString() {
-        return super.toString();
+        return "identifier{" +
+                "value='" + value + '\'' +
+                '}';
     }
 }

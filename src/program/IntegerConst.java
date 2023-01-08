@@ -10,6 +10,8 @@ public class IntegerConst extends Constant{
 
     @Override
     public String toString() {
-        return new Integer(num).toString();
+        return "IntegerConst{" +
+                "num=" + num +
+                '}';
     }
 }

@@ -10,6 +10,9 @@ public class addproc extends  exprission{
 
     @Override
     public String toString() {
-        return left.toString() +"+"+right.toString();
+        return "addproc{" +
+                "left=" + left +
+                ", right=" + right +
+                '}';
     }
 }
