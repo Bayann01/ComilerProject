@@ -1,11 +1,13 @@
 package Visitor;
 
 
+import SympolTable.sympolTable;
 import antlr.dartParser;
 import antlr.dartParserBaseVisitor;
 import program.*;
 
 public class TestVisitor extends dartParserBaseVisitor {
+    sympolTable sympolTable=new sympolTable();
     @Override
     public Constant visitNumberCosnt(dartParser.NumberCosntContext ctx) {
         double value = Double.parseDouble(ctx.NUMBER().toString());
@@ -40,6 +42,8 @@ public class TestVisitor extends dartParserBaseVisitor {
         String type = ctx.INTTYPE().getText();
         int value = Integer.parseInt(ctx.INT().toString());
         DeclerationVarINT integer = new DeclerationVarINT(id, type, value);
+        sympolTable.getDecls().add(integer);
+        this.sympolTable.print();
         return integer;
     }
 
