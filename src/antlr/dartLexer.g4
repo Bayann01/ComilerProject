@@ -165,6 +165,16 @@ CENTER : 'center';
 END :'end' ;
 START: 'start';
 //
+LISTVIEW_:'ListView';
+SCROLLDIRECTION:'scrollDirection';
+AXIS:'Axis';
+HORIZONTAL:'horizontal';
+VERTICAL:'vertical';
+BUILDER:'builder';
+ITEMBUILDER:'itemBuilder';
+ITEMCOUNT:'itemCount';
+CONTEXT:'context';
+
 ACCESSMODIFIER : PRIVATE_|PROTECT_|PUBLIC_;
 NUMBER : DIGIT+ ( '.' DIGIT+ )? EXPONENT? | '.' DIGIT+ EXPONENT? ;
 HEX_NUMBER : '0x' HEX_DIGIT+ | '0X' HEX_DIGIT+ ;
