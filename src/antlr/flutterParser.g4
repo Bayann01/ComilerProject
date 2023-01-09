@@ -93,5 +93,11 @@ columnProperties :  children | (columnproperty)*  children   |  children columnp
 columnproperty :(( MAINAXISALIGNMENTIN ':'  MAINAXISALIGNMENT) | (  CROSSAXISALIGNMENTIN ':' CROSSAXISALIGNMENT)  ) '.' ( CENTER | END | START ) ',' ;
 
 
+listView : LISTVIEW_  '('  listViewProperties  ')' ;
+listViewProperties : children | scrollDirection;
+scrollDirection : SCROLLDIRECTION ':' AXIS D (HORIZONTAL | VERTICAL);
+listViewBuilder : LISTVIEW_ D BUILDER '('  itemBuilder ( ',' itemCount )? ')';
+itemCount: ITEMCOUNT ':' INT ;
+itemBuilder: ITEMBUILDER ':' '(' CONTEXT ',' INTTYPE IDENTIFIER ')'  '{'  RETURN_ widgets SC '}';
 
 
