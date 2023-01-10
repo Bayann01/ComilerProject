@@ -19,7 +19,7 @@ public class sympolTable {
     public void print() {
         for (int i = 0; i < decls.size(); i++) {
             if (decls.get(i) != null) {
-                System.out.println("declearation Sympol Table : "  + decls.get(i));
+                System.out.println("Sympol Table : "  + decls.get(i));
             }
         }
     }

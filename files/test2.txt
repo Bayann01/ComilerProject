@@ -1,0 +1,11 @@
+Row (
+mainAxisAlignment : MainAxisAlignment.start,
+crossAxisAlignment : CrossAxisAlignment.start,
+children : [
+  Container(
+      height: 1.0 ,
+      child:
+       Image(image:NetWorkImage('hhhh'))
+      )
+      ]
+   )

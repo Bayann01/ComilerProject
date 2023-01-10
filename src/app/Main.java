@@ -3,28 +3,27 @@ package app;
 import Visitor.TestVisitor;
 import antlr.dartLexer;
 import antlr.dartParser;
-import org.antlr.runtime.tree.ParseTree;
+
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CommonTokenStream;
-import program.assignment;
-import program.exprission;
-import program.line;
-import program.prog;
+import org.antlr.v4.runtime.tree.ParseTree;
+import program.*;
 
+import java.awt.*;
 import java.io.IOException;
 
 import static org.antlr.v4.runtime.CharStreams.fromFileName;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        String source = "files/test1.txt";
+        String source = "files/test5.txt";
         CharStream charStream = fromFileName(source);
         dartLexer lexer = new dartLexer(charStream);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         dartParser parser = new dartParser(tokens);
-        dartParser.ProgContext ast = parser.prog();
+        ParseTree ast = parser.flutterProgram();
         TestVisitor visitor = new TestVisitor();
-        prog program = (prog) visitor.visit(ast);
+        flutterProgramm program = (flutterProgramm) visitor.visit(ast);
         System.out.println(program);
     }
 }

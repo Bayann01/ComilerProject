@@ -22,19 +22,10 @@ public class prog {
 
     @Override
     public String toString() {
-        return "prog{" +
-                "lines=" + lines +
-               ", main=" + main +
+        return "\nprog{" +
+                "\nlines=" + lines +
+               ", \nmain=" + main +
                 '}';
     }
-
-    //    public String toString() {
-//        StringBuilder builder = new StringBuilder();
-//        for (line line : lines) {
-//            builder.append(line);
-//            builder.append('\n');
-//        }
-//        return builder.toString();
-//    }
 
 }
