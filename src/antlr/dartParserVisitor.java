@@ -357,4 +357,282 @@ public interface dartParserVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitAddlist_queue_stack(dartParser.Addlist_queue_stackContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code textFieldl}
+	 * labeled alternative in {@link dartParser#widgets}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTextFieldl(dartParser.TextFieldlContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code imagel}
+	 * labeled alternative in {@link dartParser#widgets}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImagel(dartParser.ImagelContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code rowl}
+	 * labeled alternative in {@link dartParser#widgets}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRowl(dartParser.RowlContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code columnl}
+	 * labeled alternative in {@link dartParser#widgets}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitColumnl(dartParser.ColumnlContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code containerl}
+	 * labeled alternative in {@link dartParser#widgets}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitContainerl(dartParser.ContainerlContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#textField}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTextField(dartParser.TextFieldContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code textFieldTextPropertyl}
+	 * labeled alternative in {@link dartParser#textFieldProperties}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTextFieldTextPropertyl(dartParser.TextFieldTextPropertylContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code textFieldControllerPropertyl}
+	 * labeled alternative in {@link dartParser#textFieldProperties}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTextFieldControllerPropertyl(dartParser.TextFieldControllerPropertylContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#textFieldTextProperty}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTextFieldTextProperty(dartParser.TextFieldTextPropertyContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#textFieldControllerProperty}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTextFieldControllerProperty(dartParser.TextFieldControllerPropertyContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#image}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImage(dartParser.ImageContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code imagepropertyl}
+	 * labeled alternative in {@link dartParser#imageProperties}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImagepropertyl(dartParser.ImagepropertylContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code heightl}
+	 * labeled alternative in {@link dartParser#imageProperties}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHeightl(dartParser.HeightlContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code widthl}
+	 * labeled alternative in {@link dartParser#imageProperties}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWidthl(dartParser.WidthlContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#imageproperty}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImageproperty(dartParser.ImagepropertyContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#height}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHeight(dartParser.HeightContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#width}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWidth(dartParser.WidthContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#container}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitContainer(dartParser.ContainerContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code colorl}
+	 * labeled alternative in {@link dartParser#containerproperties}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitColorl(dartParser.ColorlContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code heightcontainerl}
+	 * labeled alternative in {@link dartParser#containerproperties}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHeightcontainerl(dartParser.HeightcontainerlContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code widthcontainerl}
+	 * labeled alternative in {@link dartParser#containerproperties}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWidthcontainerl(dartParser.WidthcontainerlContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code childl}
+	 * labeled alternative in {@link dartParser#child}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitChildl(dartParser.ChildlContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#color}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitColor(dartParser.ColorContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#heightcontainer}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHeightcontainer(dartParser.HeightcontainerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#widthcontainer}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitWidthcontainer(dartParser.WidthcontainerContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#row}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRow(dartParser.RowContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#rowProperties}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRowProperties(dartParser.RowPropertiesContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code mainaxisrow}
+	 * labeled alternative in {@link dartParser#rowproperty}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMainaxisrow(dartParser.MainaxisrowContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code crossaxisrow}
+	 * labeled alternative in {@link dartParser#rowproperty}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCrossaxisrow(dartParser.CrossaxisrowContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code childrenl}
+	 * labeled alternative in {@link dartParser#children}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitChildrenl(dartParser.ChildrenlContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#column}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitColumn(dartParser.ColumnContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#columnProperties}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitColumnProperties(dartParser.ColumnPropertiesContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code mainaxiscolumn}
+	 * labeled alternative in {@link dartParser#columnproperty}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMainaxiscolumn(dartParser.MainaxiscolumnContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code crossaxiscolumn}
+	 * labeled alternative in {@link dartParser#columnproperty}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCrossaxiscolumn(dartParser.CrossaxiscolumnContext ctx);
+	/**
+	 * Visit a parse tree produced by the {@code childrencolumnl}
+	 * labeled alternative in {@link dartParser#childrenc}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitChildrencolumnl(dartParser.ChildrencolumnlContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#listView}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitListView(dartParser.ListViewContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#listViewProperties}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitListViewProperties(dartParser.ListViewPropertiesContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#scrollDirection}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitScrollDirection(dartParser.ScrollDirectionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#listViewBuilder}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitListViewBuilder(dartParser.ListViewBuilderContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#itemCount}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitItemCount(dartParser.ItemCountContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#itemBuilder}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitItemBuilder(dartParser.ItemBuilderContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#scaffold}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitScaffold(dartParser.ScaffoldContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link dartParser#body}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBody(dartParser.BodyContext ctx);
 }

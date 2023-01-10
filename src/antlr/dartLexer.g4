@@ -174,6 +174,8 @@ BUILDER:'builder';
 ITEMBUILDER:'itemBuilder';
 ITEMCOUNT:'itemCount';
 CONTEXT:'context';
+SCAFFOLD :'Scaffold ';
+BODY : 'body';
 
 ACCESSMODIFIER : PRIVATE_|PROTECT_|PUBLIC_;
 NUMBER : DIGIT+ ( '.' DIGIT+ )? EXPONENT? | '.' DIGIT+ EXPONENT? ;

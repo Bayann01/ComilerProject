@@ -43,7 +43,7 @@ public class TestVisitor extends dartParserBaseVisitor {
         int value = Integer.parseInt(ctx.INT().toString());
         DeclerationVarINT integer = new DeclerationVarINT(id, type, value);
         sympolTable.getDecls().add(integer);
-        this.sympolTable.print();
+       // this.sympolTable.print();
         return integer;
     }
 
@@ -236,6 +236,102 @@ public class TestVisitor extends dartParserBaseVisitor {
         }
 
         return m;
+
+    }
+    @Override
+    public textFieldProperties visitTextFieldTextPropertyl(dartParser.TextFieldTextPropertylContext ctx) {
+        String e=ctx.textFieldTextProperty().SingleLineString().toString();
+        TextProperty t=new TextProperty(e);
+        return t;
+    }
+
+    @Override
+    public widget visitTextField(dartParser.TextFieldContext ctx) {
+        textField t=new textField();
+        for(int i=0 ;i<ctx.textFieldProperties().size();i++){
+            t.addtextFieldProperties((textFieldProperties) visit(ctx.textFieldProperties(i)));
+        }
+        return t;
+    }
+
+    @Override
+    public textFieldProperties visitTextFieldControllerPropertyl(dartParser.TextFieldControllerPropertylContext ctx) {
+        String e = ctx.textFieldControllerProperty().IDENTIFIER().getText();
+        ControllerProperty t=new ControllerProperty(e);
+        return t;
+    }
+
+
+
+    @Override
+    public widget visitImage(dartParser.ImageContext ctx) {
+        image t=new image();
+        for(int i=0 ;i<ctx.imageProperties().size();i++){
+            t.addimageproperty((imageproperties) visit(ctx.imageProperties(i)));
+        }
+        return t;
+    }
+
+    @Override
+    public imageproperties visitImagepropertyl(dartParser.ImagepropertylContext ctx) {
+        String url =ctx.imageproperty().SingleLineString().toString();
+        imageproperty i=new imageproperty(url);
+        return i;
+    }
+
+    @Override
+    public imageproperties visitHeightl(dartParser.HeightlContext ctx) {
+        double h=Double.parseDouble(ctx.height().NUMBER().getText());
+        height e=new height(h);
+        return e;
+    }
+
+    @Override
+    public imageproperties visitWidthl(dartParser.WidthlContext ctx) {
+        double h=Double.parseDouble(ctx.width().NUMBER().getText());
+        width e=new width(h);
+        return e;
+    }
+
+
+
+    @Override
+    public widget visitContainerl(dartParser.ContainerlContext ctx) {
+        child c=(child) visit(ctx.container().child().getChild(0));
+        container t=new container(c);
+        for(int i=0 ;i<ctx.container().containerproperties().size();i++){
+            t.addcontainerproperties((containerproperties) visit(ctx.container().containerproperties(i)));
+        }
+        return t;
+    }
+
+    @Override
+    public child visitChildl(dartParser.ChildlContext ctx) {
+        widget w=(widget) visit(ctx.widgets().getChild(0));
+        child c=new child(w);
+        return c;
+
+    }
+
+    @Override
+    public containerproperties visitHeightcontainerl(dartParser.HeightcontainerlContext ctx) {
+        double h=Double.parseDouble(ctx.heightcontainer().NUMBER().getText());
+        heightcontaineer e=new heightcontaineer(h);
+        return e;
+    }
+
+    @Override
+    public containerproperties visitWidthcontainerl(dartParser.WidthcontainerlContext ctx) {
+        double h=Double.parseDouble(ctx.widthcontainer().NUMBER().getText());
+        widthcontainer e=new widthcontainer(h);
+        return e;
+    }
+
+    @Override
+    public containerproperties visitColorl(dartParser.ColorlContext ctx) {
+        String c =ctx.color().IDENTIFIER().toString();
+        color i=new color(c);
+        return i;
 
     }
 }
