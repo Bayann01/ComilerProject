@@ -390,7 +390,6 @@ public class TestVisitor extends dartParserBaseVisitor {
         else axis = ctx.CENTER().getText();
         columnMainAxis r = new columnMainAxis(axis);
         return r;
-
     }
 
     @Override
