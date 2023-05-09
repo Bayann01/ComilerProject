@@ -183,6 +183,13 @@ CONTEXT:'context';
 SCAFFOLD :'Scaffold';
 BODY : 'body';
 TYPEWIDGET: 'StatelessWidget' | 'StatefullWidget';
+Navigator : 'Navigator';
+PUSH:'push';
+Pop:'pop';
+MaterialPageRoute :'MaterialPageRoute';
+Text:'Text';
+OnPressed : 'onPressed';
+TextButton : 'TextButton';
 
 
 ACCESSMODIFIER : PRIVATE_|PROTECT_|PUBLIC_;

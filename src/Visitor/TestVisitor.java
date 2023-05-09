@@ -8,6 +8,8 @@ import org.antlr.v4.runtime.tree.ParseTree;
 import program.*;
 
 import java.sql.SQLOutput;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TestVisitor extends dartParserBaseVisitor {
     sympolTable sympolTable = new sympolTable();
@@ -46,7 +48,7 @@ public class TestVisitor extends dartParserBaseVisitor {
         String type = ctx.INTTYPE().getText();
         int value = Integer.parseInt(ctx.INT().toString());
         DeclerationVarINT integer = new DeclerationVarINT(id, type, value);
-        sympolTable.getDecls().add(integer);
+  //      sympolTable.getDecls().add(integer);
         // this.sympolTable.print();
         return integer;
     }
@@ -272,12 +274,17 @@ public class TestVisitor extends dartParserBaseVisitor {
     public Object visitContainer(dartParser.ContainerContext ctx) {
         widget c = new widget();
         if(ctx.child() !=null)
-            c = (widget) visit(ctx.child());
+        {   c = (widget) visit(ctx.child());Map<String,Object> m = new HashMap<>();
+            m.put("container",c );
+            sympolTable.getMap().add(m);
+        }
         else c = null;
         container t = new container(c);
         for (int i = 0; i < ctx.containerproperties().size(); i++) {
             t.addcontainerproperties((containerproperties) visit(ctx.containerproperties(i)));
+
         }
+        this.sympolTable.print();
         return t;
     }
 

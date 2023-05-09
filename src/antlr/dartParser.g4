@@ -128,6 +128,7 @@ widgets:textField   #textFieldl
        |container   #containerl
        |listView    #listviewl
        |scaffold    #scaffoldl
+//       |textButtonExpr #button
        ;
 //////////////textfield//////////
 textField
@@ -194,10 +195,62 @@ childrenc  :CHILDREN ':' '['   (widgets (',' widgets)*)?   ']'  #columnChildren;
 
 
 
-
 listView : LISTVIEW_  '('  listViewProperties (',' listViewProperties)* ')'  ;
 listViewProperties: childrenlist?  scrollDirection?
                   | scrollDirection  childrenlist?
                   ;
 childrenlist  :CHILDREN ':' '['  (widgets (',' widgets)*)?  ']'  #listChildren;
 scrollDirection : SCROLLDIRECTION ':' AXIS D (HORIZONTAL | VERTICAL)    #listScrolling;
+
+navigatorPushExpr
+    : Navigator '.' PUSH '(' CONTEXT ',' materialPageRouteExpr ')' ';'
+    ;
+
+materialPageRouteExpr
+    : MaterialPageRoute '(' BUILDER ':' '(' CONTEXT ')' '=>'  pageBuilderExpr ')'  ','
+    ;
+
+pageBuilderExpr
+    :  pageInstanceExpr
+    ;
+
+
+pageInstanceExpr
+    : typeName '(' ')'
+    ;
+
+typeName
+    : IDENTIFIER
+    ;
+
+navigatorPopExpr
+     : Navigator '.'  '(' CONTEXT ')' ';'
+     ;
+
+textButtonExpr
+    : TextButton '(' onPressedExpr ',' childExpr ')' ';'
+    ;
+
+onPressedExpr
+    : OnPressed ':' '(' functionExpr ')' ','
+    ;
+
+childExpr
+    : 'child' ':' textExpr ','
+    ;
+
+functionExpr
+    : '(' ')' '=>' blockExpr
+    ;
+
+blockExpr
+    : '{'navigatorPushExpr | navigatorPopExpr '}'
+    ;
+
+textExpr
+    : Text '(' stringLiteralExpr ')'
+    ;
+
+stringLiteralExpr
+    : SingleLineString
+    ;

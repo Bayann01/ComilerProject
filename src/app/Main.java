@@ -14,6 +14,7 @@ import java.io.IOException;
 
 import static org.antlr.v4.runtime.CharStreams.fromFileName;
 
+
 public class Main {
     public static void main(String[] args) throws IOException {
         String source = "files/test5.txt";
