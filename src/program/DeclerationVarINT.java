@@ -14,10 +14,10 @@ public class DeclerationVarINT extends decleration {
 
     @Override
     public String toString() {
-        return "DeclerationVarINT{" +
-                "ID='" + ID + '\'' +
-                ", type='" + type + '\'' +
-                ", value=" + value +
-                '}';
+        return "\nDeclerationVarINT{" +
+                "\nname='" + ID + '\'' +
+                "\n, \ntype='" + type + '\'' +
+                "\n, \nvalue=" + value +
+                "\n}";
     }
 }

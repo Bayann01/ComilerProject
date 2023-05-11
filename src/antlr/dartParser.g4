@@ -16,9 +16,9 @@ line :  statment     // #statement
         ;
 ///////////////////////////////////////////////////////////
 classDecl: CLASS_ IDENTIFIER (EXTENDS_ TYPEWIDGET)? OBC classBody CBC;
-classBody: ((parametersFUNCTION | decl) SC)* (classConstructor)* (function)* (functionVoid)*;
+classBody: ((function | decl) )* (classConstructor)* (function)* (functionVoid)*;
 classConstructor: normalConstructor   // #NORMALCONSTRUCTOR
-                 | factoryConstructor //  #FACTORYCONSTRUCTOR
+                 |factoryConstructor //  #FACTORYCONSTRUCTOR
                  ;
 normalConstructor: constructorName OP parametersConstructor CP OBC constructorBody CBC;
 factoryConstructor: FACTORY_ constructorName OP parametersConstructor CP OBC factoryConstructorBody CBC;
@@ -118,7 +118,8 @@ array : INTTYPE IDENTIFIER EQ OB INT (C INT)* CB                                
 //addlist_queue_stack : IDENTIFIER D ADD_ OP (INT|DOUBLE|STRING|BOOL|VAR) CP ;
 
 //progflutter : widgets* (line)? ;
-flutterProgram :  VOID_ Main '(' ')' '{' RUNAPP '(' MATERIALAPP '(' HOME ':' scaffold ')' ')' ';' '}';
+widgetclass : CLASS_ IDENTIFIER EXTENDS_ TYPEWIDGET  '{' line*  '}'   ;
+flutterProgram : widgetclass VOID_ Main '(' ')' '{' RUNAPP '(' MATERIALAPP '(' HOME ':' IDENTIFIER '('')' ')' ')' ';' '}';
 scaffold : SCAFFOLD '(' BODY ':'  widgets ')' ;
 //body:  ;
 widgets:textField   #textFieldl

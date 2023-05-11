@@ -1,23 +1,20 @@
 package app;
 
+import SympolTable.sympolTable;
 import Visitor.TestVisitor;
 import antlr.dartLexer;
 import antlr.dartParser;
-
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
-import program.*;
+import program.flutterProgramm;
 
-import java.awt.*;
 import java.io.IOException;
 
 import static org.antlr.v4.runtime.CharStreams.fromFileName;
-
-
 public class Main {
     public static void main(String[] args) throws IOException {
-        String source = "files/test5.txt";
+        String source = "files/test6.txt";
         CharStream charStream = fromFileName(source);
         dartLexer lexer = new dartLexer(charStream);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -26,5 +23,7 @@ public class Main {
         TestVisitor visitor = new TestVisitor();
         flutterProgramm program = (flutterProgramm) visitor.visit(ast);
         System.out.println(program);
+        System.out.println("___________________________");
+        sympolTable.print();
     }
 }

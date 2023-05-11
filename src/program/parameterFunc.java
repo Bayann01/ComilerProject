@@ -1,6 +1,6 @@
 package program;
 
-public class parameterFunc {
+public class parameterFunc extends function{
 String type;
 String ID ;
 
@@ -10,9 +10,9 @@ String ID ;
     }
     @Override
     public String toString() {
-        return "parameterFunc{" +
-                "type='" + type + '\'' +
-                ", ID='" + ID + '\'' +
-                '}';
+        return "\nparameter Function{" +
+                "\ntype='" + type + '\'' +
+                ", \nID='" + ID + '\'' +
+                "\n}";
     }
 }

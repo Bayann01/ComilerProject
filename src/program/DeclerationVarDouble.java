@@ -14,6 +14,10 @@ public class DeclerationVarDouble extends decleration {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "\nDeclerationVarDouble{" +
+                "\nname='" + ID + '\'' +
+                ", \ntype='" + type + '\'' +
+                ", \nvalue=" + value +
+                "\n}";
     }
 }

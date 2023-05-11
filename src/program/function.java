@@ -1,5 +1,7 @@
 package program;
 
+import org.antlr.v4.runtime.tree.TerminalNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +10,7 @@ public class function extends line {
     String name;
     Scaffold scaffold ;
     List<parameterFunc> parameters;
-    List<line> body;
+    List<line> body=new  ArrayList<>();
     public function(String type, String name ,Scaffold sc) {
         this.type = type;
         this.name = name;
@@ -16,22 +18,27 @@ public class function extends line {
         this.parameters = new ArrayList<>();
         this.body =new ArrayList<>();
     }
+public function(){}
 
-    void AddLineToBody (line l){
-        this.body.add(l);
+    public function(String type, String funcName) {
+        this.type=type;
+        this.name=funcName;
     }
-    void AddParameters (parameterFunc expr){
+
+    public void AddParameters (parameterFunc expr){
         this.parameters.add(expr);
     }
-
+    public void Addline (line expr){
+        this.body.add(expr);
+    }
     @Override
     public String toString() {
-        return "function{" +
-                "type='" + type + '\'' +
-                ", name='" + name + '\'' +
-                ", scaffold=" + scaffold +
-                ", parameters=" + parameters +
-                ", body=" + body +
-                '}';
+        return "\nfunction{" +
+                "\ntype='" + type + '\'' +
+                ", \nname='" + name + '\'' +
+                ", \nscaffold=" + scaffold +
+                ", \nparameters=" + parameters +
+                ", \nbody=" + body +
+                "\n}";
     }
 }

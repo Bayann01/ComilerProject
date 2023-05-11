@@ -157,6 +157,7 @@ HOME : 'home';
 MATERIALAPP :'MaterialApp' ;
 
 RUNAPP : 'runApp';
+MYAPP : 'MyApp';
 HEIGHT_:'height';
 WIDTH_:'width';
 //row&cloumn

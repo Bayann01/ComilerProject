@@ -1,19 +1,25 @@
 package program;
 
 public class flutterProgramm {
-    Scaffold scaffold;
+    WidgetClass scaffold;
+    String home ;
 
     public flutterProgramm() {
+    }
+
+    public flutterProgramm(WidgetClass sc,String ho) {
+        this.scaffold=sc;
+        this.home = ho;
+
     }
 
     @Override
     public String toString() {
         return "flutterProgramm{" +
-                "scaffold=" + scaffold +
+                "Class=" + scaffold +
+                " , Home=" + home +
                 '}';
     }
 
-    public flutterProgramm(Scaffold scaffold) {
-        this.scaffold = scaffold;
-    }
+
 }

@@ -5,10 +5,13 @@ import SympolTable.sympolTable;
 import antlr.dartParser;
 import antlr.dartParserBaseVisitor;
 import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.runtime.tree.TerminalNode;
 import program.*;
 
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class TestVisitor extends dartParserBaseVisitor {
@@ -48,8 +51,9 @@ public class TestVisitor extends dartParserBaseVisitor {
         String type = ctx.INTTYPE().getText();
         int value = Integer.parseInt(ctx.INT().toString());
         DeclerationVarINT integer = new DeclerationVarINT(id, type, value);
-  //      sympolTable.getDecls().add(integer);
-        // this.sympolTable.print();
+        Map<String, Object> m = new HashMap<>();
+        m.put("INT", integer);
+        sympolTable.getMap().add(m);
         return integer;
     }
 
@@ -59,6 +63,9 @@ public class TestVisitor extends dartParserBaseVisitor {
         String type = ctx.DOUBLETYPE().getText();
         int value = Integer.parseInt(ctx.NUMBER().toString());
         DeclerationVarDouble d = new DeclerationVarDouble(id, type, value);
+        Map<String, Object> m = new HashMap<>();
+        m.put("Double", d);
+        sympolTable.getMap().add(m);
         return d;
     }
 
@@ -68,6 +75,9 @@ public class TestVisitor extends dartParserBaseVisitor {
         String type = ctx.STRINGTYPE().getText();
         String value = ctx.SingleLineString().toString();
         DeclerationVarString s = new DeclerationVarString(id, type, value);
+        Map<String, Object> m = new HashMap<>();
+        m.put("String", s);
+        sympolTable.getMap().add(m);
         return s;
     }
 
@@ -86,6 +96,9 @@ public class TestVisitor extends dartParserBaseVisitor {
         String type = ctx.BOOLTYPE().getText();
         boolean value = Boolean.parseBoolean(ctx.BOOL().toString());
         DeclerationVarBoolean b = new DeclerationVarBoolean(id, type, value);
+        Map<String, Object> m = new HashMap<>();
+        m.put("bool", b);
+        sympolTable.getMap().add(m);
         return b;
     }
 
@@ -223,6 +236,16 @@ public class TestVisitor extends dartParserBaseVisitor {
 
     }
 
+
+    @Override
+    public Object visitParametersFUNCTION(dartParser.ParametersFUNCTIONContext ctx) {
+        String datatype =ctx.getChild(0).getText();
+        String name = ctx.getChild(1).getText();
+        parameterFunc pc = new parameterFunc(datatype,name);
+
+        return pc;
+    }
+
     @Override
     public widget visitTextField(dartParser.TextFieldContext ctx) {
         textField t = new textField();
@@ -238,7 +261,6 @@ public class TestVisitor extends dartParserBaseVisitor {
         textFieldControllerProperty t = new textFieldControllerProperty(e);
         return t;
     }
-
 
     @Override
     public widget visitImage(dartParser.ImageContext ctx) {
@@ -273,18 +295,20 @@ public class TestVisitor extends dartParserBaseVisitor {
     @Override
     public Object visitContainer(dartParser.ContainerContext ctx) {
         widget c = new widget();
-        if(ctx.child() !=null)
-        {   c = (widget) visit(ctx.child());Map<String,Object> m = new HashMap<>();
-            m.put("container",c );
+        Map<String, Object> m = new HashMap<>();
+        if (ctx.child() != null) {
+            c = (widget) visit(ctx.child());
+
+            m.put("container", c);
             sympolTable.getMap().add(m);
-        }
-        else c = null;
+        } else c = null;
         container t = new container(c);
         for (int i = 0; i < ctx.containerproperties().size(); i++) {
             t.addcontainerproperties((containerproperties) visit(ctx.containerproperties(i)));
+//            m.put("containerProp",t );
+//            sympolTable.getMap().add(m);
 
         }
-        this.sympolTable.print();
         return t;
     }
 
@@ -335,6 +359,7 @@ public class TestVisitor extends dartParserBaseVisitor {
     public Object visitRow(dartParser.RowContext ctx) {
         rowproperties rp = (rowproperties) visit(ctx.rowProperties().get(0));
         row r = new row(rp);
+
         return r;
     }
 
@@ -343,6 +368,7 @@ public class TestVisitor extends dartParserBaseVisitor {
         rowProperty RP = (rowProperty) visit(ctx.rowproperty().get(0));
         rowChildren RC = (rowChildren) visitRowChildren((dartParser.RowChildrenContext) ctx.children());
         rowproperties prop = new rowproperties(RC);
+
         if (RP != null) {
             for (int i = 0; i < ctx.rowproperty().size(); i++) {
                 RP = (rowProperty) visit(ctx.rowproperty().get(i));
@@ -409,6 +435,7 @@ public class TestVisitor extends dartParserBaseVisitor {
         return r;
 
     }
+
     @Override
     public Object visitListviewl(dartParser.ListviewlContext ctx) {
         ListViewProperties ListProperties = (ListViewProperties) visit(ctx.listView().listViewProperties().get(0));
@@ -416,9 +443,10 @@ public class TestVisitor extends dartParserBaseVisitor {
         return l;
 
     }
+
     @Override
     public Object visitListViewProperties(dartParser.ListViewPropertiesContext ctx) {
-        ListViewChildren children =new ListViewChildren();
+        ListViewChildren children = new ListViewChildren();
         ListViewScrolling scrolling = new ListViewScrolling();
         ListViewProperties lp = new ListViewProperties();
         if (ctx.scrollDirection() != null) {
@@ -427,7 +455,7 @@ public class TestVisitor extends dartParserBaseVisitor {
         if (ctx.childrenlist() != null) {
             children = (ListViewChildren) visitListChildren((dartParser.ListChildrenContext) ctx.childrenlist());
         }
-         lp = new ListViewProperties(children,scrolling);
+        lp = new ListViewProperties(children, scrolling);
         return lp;
     }
 
@@ -451,9 +479,28 @@ public class TestVisitor extends dartParserBaseVisitor {
     }
 
     @Override
+    public Object visitWidgetclass(dartParser.WidgetclassContext ctx) {
+        String Name = ctx.IDENTIFIER().getText() ;
+        String Type = ctx.TYPEWIDGET().getText();
+
+
+        WidgetClass WC =new WidgetClass(Name , Type  );
+        for (int i = 0; i < ctx.line().size(); i++) {
+            WC.addline((line) visit(ctx.line(i)));
+        }
+        Map<String, Object> m = new HashMap<>();
+        m.put("Class", WC);
+        sympolTable.getMap().add(m);
+
+        return WC;
+    }
+
+    @Override
     public Object visitFlutterProgram(dartParser.FlutterProgramContext ctx) {
-        Scaffold sc = (Scaffold) visit(ctx.scaffold());
-        flutterProgramm fG = new flutterProgramm(sc);
+        WidgetClass sc = (WidgetClass) visit(ctx.widgetclass());
+        String home = ctx.IDENTIFIER().getText();
+        flutterProgramm fG = new flutterProgramm(sc,home);
+
         return fG;
     }
 
@@ -461,7 +508,28 @@ public class TestVisitor extends dartParserBaseVisitor {
     public Object visitScaffold(dartParser.ScaffoldContext ctx) {
         widget w = (widget) visit(ctx.widgets());
         Scaffold sc = new Scaffold(w);
+
         return sc;
     }
+    @Override
+    public Object visitFunction(dartParser.FunctionContext ctx) {
+        String type = ctx.datatypes().getText();
+        String name = ctx.IDENTIFIER().toString();
+        Scaffold sc = (Scaffold) visit(ctx.scaffold());
+        function f = new function(type,name,sc);
+        for (dartParser.ParametersFUNCTIONContext expr : ctx.parametersFUNCTION()) {
+            f.AddParameters((parameterFunc) visit(expr));
+        }
+        for (int i = 0; i < ctx.line().size(); i++) {
+            System.out.println(ctx.line(0).getText());
+            f.Addline((line) visit(ctx.line(i)));
+        }
+        Map<String, Object> m = new HashMap<>();
+        m.put("Function", f);
+        sympolTable.getMap().add(m);
+        return f;
+    }
+
+
 }
 
