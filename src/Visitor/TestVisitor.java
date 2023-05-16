@@ -5,13 +5,9 @@ import SympolTable.sympolTable;
 import antlr.dartParser;
 import antlr.dartParserBaseVisitor;
 import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.TerminalNode;
 import program.*;
 
-import java.sql.SQLOutput;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class TestVisitor extends dartParserBaseVisitor {
@@ -482,8 +478,6 @@ public class TestVisitor extends dartParserBaseVisitor {
     public Object visitWidgetclass(dartParser.WidgetclassContext ctx) {
         String Name = ctx.IDENTIFIER().getText() ;
         String Type = ctx.TYPEWIDGET().getText();
-
-
         WidgetClass WC =new WidgetClass(Name , Type  );
         for (int i = 0; i < ctx.line().size(); i++) {
             WC.addline((line) visit(ctx.line(i)));
@@ -497,10 +491,14 @@ public class TestVisitor extends dartParserBaseVisitor {
 
     @Override
     public Object visitFlutterProgram(dartParser.FlutterProgramContext ctx) {
-        WidgetClass sc = (WidgetClass) visit(ctx.widgetclass());
+        WidgetClass sc ;
         String home = ctx.IDENTIFIER().getText();
-        flutterProgramm fG = new flutterProgramm(sc,home);
-
+        flutterProgramm fG = new flutterProgramm(home);
+        for (int i = 0; i < ctx.widgetclass().size(); i++) {
+            System.out.println(ctx.widgetclass());
+            sc = (WidgetClass) visit((ParseTree) ctx.widgetclass().get(i));
+            fG.addWidget(sc);
+        }
         return fG;
     }
 

@@ -7,6 +7,15 @@ class myApp extends StatelessWidget {
         );
   }
 }
+class myApp extends StatelessWidget {
+  int i =0 ;
+  Widget build(BuildContext context) {
+  int j =0 ;
+    return Scaffold(
+    body : Container()
+        );
+  }
+}
 void main() {
   runApp(MaterialApp(
       home:myApp()

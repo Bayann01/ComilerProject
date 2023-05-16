@@ -1,25 +1,29 @@
 package program;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class flutterProgramm {
-    WidgetClass scaffold;
+    List<WidgetClass> widget;
     String home ;
 
     public flutterProgramm() {
     }
 
-    public flutterProgramm(WidgetClass sc,String ho) {
-        this.scaffold=sc;
+    public flutterProgramm(String ho) {
+        this.widget=new ArrayList<>();
         this.home = ho;
 
+    }
+    public void addWidget(WidgetClass widgetClass){
+        widget.add(widgetClass);
     }
 
     @Override
     public String toString() {
         return "flutterProgramm{" +
-                "Class=" + scaffold +
-                " , Home=" + home +
+                "widget=" + widget +
+                ", home='" + home + '\'' +
                 '}';
     }
-
-
 }
