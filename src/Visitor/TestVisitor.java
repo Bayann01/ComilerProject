@@ -495,7 +495,7 @@ public class TestVisitor extends dartParserBaseVisitor {
         String home = ctx.IDENTIFIER().getText();
         flutterProgramm fG = new flutterProgramm(home);
         for (int i = 0; i < ctx.widgetclass().size(); i++) {
-            System.out.println(ctx.widgetclass());
+            //System.out.println(ctx.widgetclass());
             sc = (WidgetClass) visit((ParseTree) ctx.widgetclass().get(i));
             fG.addWidget(sc);
         }
