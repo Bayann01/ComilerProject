@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WidgetClass {
-    String name ;
+    public String name ;
     String Type ;
     ArrayList<line> l = new ArrayList<>() ;
 

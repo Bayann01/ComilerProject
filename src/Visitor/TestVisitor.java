@@ -1,12 +1,10 @@
 package Visitor;
-
-
+import SemanticCheck.Semantic_Error;
 import SympolTable.sympolTable;
 import antlr.dartParser;
 import antlr.dartParserBaseVisitor;
 import org.antlr.v4.runtime.tree.ParseTree;
 import program.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -145,6 +143,9 @@ public class TestVisitor extends dartParserBaseVisitor {
         String id = ctx.IDENTIFIER().getText();
         exprission value = (exprission) visit(ctx.exprission());
         assignment a = new assignment(id, value);
+        Map<String ,Object> m = new HashMap<>();
+        m.put("assignment" , a);
+        sympolTable.getMap().add(m);
         return a;
     }
 
@@ -432,6 +433,7 @@ public class TestVisitor extends dartParserBaseVisitor {
 
     }
 
+
     @Override
     public Object visitListviewl(dartParser.ListviewlContext ctx) {
         ListViewProperties ListProperties = (ListViewProperties) visit(ctx.listView().listViewProperties().get(0));
@@ -491,6 +493,7 @@ public class TestVisitor extends dartParserBaseVisitor {
 
     @Override
     public Object visitFlutterProgram(dartParser.FlutterProgramContext ctx) {
+
         WidgetClass sc ;
         String home = ctx.IDENTIFIER().getText();
         flutterProgramm fG = new flutterProgramm(home);
@@ -499,6 +502,8 @@ public class TestVisitor extends dartParserBaseVisitor {
             sc = (WidgetClass) visit((ParseTree) ctx.widgetclass().get(i));
             fG.addWidget(sc);
         }
+        Semantic_Error semantic = new Semantic_Error(sympolTable);
+        semantic.check();
         return fG;
     }
 
@@ -519,7 +524,6 @@ public class TestVisitor extends dartParserBaseVisitor {
             f.AddParameters((parameterFunc) visit(expr));
         }
         for (int i = 0; i < ctx.line().size(); i++) {
-            System.out.println(ctx.line(0).getText());
             f.Addline((line) visit(ctx.line(i)));
         }
         Map<String, Object> m = new HashMap<>();
@@ -527,6 +531,7 @@ public class TestVisitor extends dartParserBaseVisitor {
         sympolTable.getMap().add(m);
         return f;
     }
+
 
 
 }

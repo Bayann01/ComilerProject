@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Stack;
 
 public class sympolTable {
-   static Stack<Map<String, Object>> map = new Stack<>();
+  public static Stack<Map<String, Object>> map = new Stack<>();
 
     public Stack<Map<String, Object>> getMap() {
         return map;

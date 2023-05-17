@@ -1,5 +1,6 @@
 package app;
 
+import SemanticCheck.Semantic_Error;
 import SympolTable.sympolTable;
 import Visitor.TestVisitor;
 import antlr.dartLexer;
@@ -22,8 +23,8 @@ public class Main {
         ParseTree ast = parser.flutterProgram();
         TestVisitor visitor = new TestVisitor();
         flutterProgramm program = (flutterProgramm) visitor.visit(ast);
-        System.out.println(program);
+       // System.out.println(program);
         System.out.println("___________________________");
-        sympolTable.print();
+       // sympolTable.print();
     }
 }
