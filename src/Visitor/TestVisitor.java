@@ -1,10 +1,12 @@
 package Visitor;
+
 import SemanticCheck.Semantic_Error;
 import SympolTable.sympolTable;
 import antlr.dartParser;
 import antlr.dartParserBaseVisitor;
 import org.antlr.v4.runtime.tree.ParseTree;
 import program.*;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -143,8 +145,8 @@ public class TestVisitor extends dartParserBaseVisitor {
         String id = ctx.IDENTIFIER().getText();
         exprission value = (exprission) visit(ctx.exprission());
         assignment a = new assignment(id, value);
-        Map<String ,Object> m = new HashMap<>();
-        m.put("assignment" , a);
+        Map<String, Object> m = new HashMap<>();
+        m.put("assignment", a);
         sympolTable.getMap().add(m);
         return a;
     }
@@ -236,9 +238,9 @@ public class TestVisitor extends dartParserBaseVisitor {
 
     @Override
     public Object visitParametersFUNCTION(dartParser.ParametersFUNCTIONContext ctx) {
-        String datatype =ctx.getChild(0).getText();
+        String datatype = ctx.getChild(0).getText();
         String name = ctx.getChild(1).getText();
-        parameterFunc pc = new parameterFunc(datatype,name);
+        parameterFunc pc = new parameterFunc(datatype, name);
 
         return pc;
     }
@@ -473,28 +475,25 @@ public class TestVisitor extends dartParserBaseVisitor {
         else axis = ctx.VERTICAL().getText();
         ListViewScrolling r = new ListViewScrolling(axis);
         return r;
-
     }
 
     @Override
     public Object visitWidgetclass(dartParser.WidgetclassContext ctx) {
-        String Name = ctx.IDENTIFIER().getText() ;
+        String Name = ctx.IDENTIFIER().getText();
         String Type = ctx.TYPEWIDGET().getText();
-        WidgetClass WC =new WidgetClass(Name , Type  );
+        WidgetClass WC = new WidgetClass(Name, Type);
         for (int i = 0; i < ctx.line().size(); i++) {
             WC.addline((line) visit(ctx.line(i)));
         }
         Map<String, Object> m = new HashMap<>();
         m.put("Class", WC);
         sympolTable.getMap().add(m);
-
         return WC;
     }
 
     @Override
     public Object visitFlutterProgram(dartParser.FlutterProgramContext ctx) {
-
-        WidgetClass sc ;
+        WidgetClass sc;
         String home = ctx.IDENTIFIER().getText();
         flutterProgramm fG = new flutterProgramm(home);
         for (int i = 0; i < ctx.widgetclass().size(); i++) {
@@ -511,15 +510,15 @@ public class TestVisitor extends dartParserBaseVisitor {
     public Object visitScaffold(dartParser.ScaffoldContext ctx) {
         widget w = (widget) visit(ctx.widgets());
         Scaffold sc = new Scaffold(w);
-
         return sc;
     }
+
     @Override
     public Object visitFunction(dartParser.FunctionContext ctx) {
         String type = ctx.datatypes().getText();
         String name = ctx.IDENTIFIER().toString();
         Scaffold sc = (Scaffold) visit(ctx.scaffold());
-        function f = new function(type,name,sc);
+        function f = new function(type, name, sc);
         for (dartParser.ParametersFUNCTIONContext expr : ctx.parametersFUNCTION()) {
             f.AddParameters((parameterFunc) visit(expr));
         }
@@ -531,7 +530,6 @@ public class TestVisitor extends dartParserBaseVisitor {
         sympolTable.getMap().add(m);
         return f;
     }
-
 
 
 }

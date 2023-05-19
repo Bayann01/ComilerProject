@@ -9,15 +9,12 @@ import java.util.Stack;
 
 public class sympolTable {
   public static Stack<Map<String, Object>> map = new Stack<>();
-
     public Stack<Map<String, Object>> getMap() {
         return map;
     }
-
     public void setMap(Stack<Map<String, Object>> maps) {
         this.map = maps;
     }
-
     public static void print() {
         for (int i = map.size()-1; i >= 0  ; i--) {
             if (map.get(i) != null) {

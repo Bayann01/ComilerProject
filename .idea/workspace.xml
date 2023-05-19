@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="824ba1aa-6093-4f3c-8a2f-4ce89c6a3375" name="Changes" comment="finish symbol table">
+      <change beforePath="$PROJECT_DIR$/files/test6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/test6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Semantic_Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Semantic_Error.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SympolTable/sympolTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SympolTable/sympolTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Visitor/TestVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visitor/TestVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/dartParser.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartParser.g4" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2PbETwlTOAjkqex3O6XPFNMVVyL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Bayan/Desktop/Antlr/antlr-4.10.1-complete.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15136719&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.Main" />
+      <module name="ComilerProject" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-19\lib&quot; --add-modules=javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Program Files\Java\javafx-sdk-19\lib&quot; --add-modules=javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="824ba1aa-6093-4f3c-8a2f-4ce89c6a3375" name="Changes" comment="" />
+      <created>1683717393216</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683717393216</updated>
+    </task>
+    <task id="LOCAL-00001" summary="finish symbol table">
+      <created>1683824483853</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683824483853</updated>
+    </task>
+    <task id="LOCAL-00002" summary="finish symbol table">
+      <created>1683913180919</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683913180919</updated>
+    </task>
+    <task id="LOCAL-00003" summary="finish symbol table">
+      <created>1684250801002</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684250801003</updated>
+    </task>
+    <task id="LOCAL-00004" summary="finish symbol table">
+      <created>1684250906919</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684250906919</updated>
+    </task>
+    <task id="LOCAL-00005" summary="finish symbol table">
+      <created>1684250987018</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684250987018</updated>
+    </task>
+    <task id="LOCAL-00006" summary="finish symbol table">
+      <created>1684251033663</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684251033663</updated>
+    </task>
+    <task id="LOCAL-00007" summary="finish symbol table">
+      <created>1684251081426</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684251081426</updated>
+    </task>
+    <task id="LOCAL-00008" summary="finish symbol table">
+      <created>1684251353996</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684251353996</updated>
+    </task>
+    <task id="LOCAL-00009" summary="finish symbol table">
+      <created>1684251968117</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684251968117</updated>
+    </task>
+    <task id="LOCAL-00010" summary="finish symbol table">
+      <created>1684252418507</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684252418507</updated>
+    </task>
+    <task id="LOCAL-00011" summary="finish symbol table">
+      <created>1684252461131</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684252461131</updated>
+    </task>
+    <task id="LOCAL-00012" summary="finish symbol table">
+      <created>1684516766144</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684516766144</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="finish symbol table" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish symbol table" />
+  </component>
+</project>

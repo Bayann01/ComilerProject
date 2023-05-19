@@ -57,7 +57,6 @@ decl : declINT
      | declSTRING
      | declbool
      | declVar
-
      ;
 varplusplus : (IDENTIFIER PLPL
             | PLPL IDENTIFIER
@@ -114,10 +113,7 @@ array : INTTYPE IDENTIFIER EQ OB INT (C INT)* CB                                
       | (DOUBLETYPE|FLOATTYPE) IDENTIFIER EQ OB NUMBER (C NUMBER)* CB                     #arrayDouble
       | STRINGTYPE IDENTIFIER EQ OB SingleLineString (C SingleLineString)* CB             #arrayString
       | BOOLTYPE IDENTIFIER EQ OB BOOL (C BOOL)* CB                                       #arrayBool;
-//list:datatypes IDENTIFIER EQ NEW_ LIST (OP CP | OP INT CP) ;
-//addlist_queue_stack : IDENTIFIER D ADD_ OP (INT|DOUBLE|STRING|BOOL|VAR) CP ;
 
-//progflutter : widgets* (line)? ;
 widgetclass : CLASS_ IDENTIFIER EXTENDS_ TYPEWIDGET  '{' line*  '}'   ;
 flutterProgram : widgetclass* VOID_ Main '(' ')' '{' RUNAPP '(' MATERIALAPP '(' HOME ':' IDENTIFIER '('')' ')' ')' ';' '}';
 scaffold : SCAFFOLD '(' BODY ':'  widgets ')' ;

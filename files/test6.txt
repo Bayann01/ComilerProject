@@ -1,7 +1,7 @@
 class myApp extends StatelessWidget {
   int l =0 ;
   Widget build(BuildContext context) {
-  int m =0 ;
+  String m ='0' ;
     return Scaffold(
     body : Container()
         );
