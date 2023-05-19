@@ -2,6 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="824ba1aa-6093-4f3c-8a2f-4ce89c6a3375" name="Changes" comment="finish symbol table">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/antlr/dartLexer.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/antlr/dartLexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/antlr/dartLexer.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/antlr/dartParser.interp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/antlr/dartParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/antlr/dartParser.tokens" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/antlr/dartParserBaseListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/antlr/dartParserBaseVisitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/antlr/dartParserListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/antlr/dartParserVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/test6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/test6.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Semantic_Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Semantic_Error.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SympolTable/sympolTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SympolTable/sympolTable.java" afterDir="false" />
@@ -163,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684516766144</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="finish symbol table">
+      <created>1684519604576</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684519604576</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

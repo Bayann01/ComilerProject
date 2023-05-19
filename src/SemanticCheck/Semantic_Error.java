@@ -24,7 +24,6 @@ public class Semantic_Error {
         }
         return true;
     }
-
     public boolean checkforwidgetredublication(sympolTable sympoltable) {
         for (int i = 0; i < sympoltable.getMap().size(); i++) {
             if (sympoltable.getMap().get(i).keySet().toString().equals("[Class]")) {
