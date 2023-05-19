@@ -295,9 +295,9 @@ public class TestVisitor extends dartParserBaseVisitor {
         Map<String, Object> m = new HashMap<>();
         if (ctx.child() != null) {
             c = (widget) visit(ctx.child());
-
-            m.put("container", c);
-            sympolTable.getMap().add(m);
+//
+//            m.put("container", c);
+//            sympolTable.getMap().add(m);
         } else c = null;
         container t = new container(c);
         for (int i = 0; i < ctx.containerproperties().size(); i++) {
