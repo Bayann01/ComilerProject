@@ -317,7 +317,6 @@ MULTI_LINE_COMMENT=195
 'Stack'=122
 'this'=123
 'throw'=124
-'true'=125
 'try'=126
 'typedef'=127
 'int'=128

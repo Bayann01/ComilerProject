@@ -1,17 +1,20 @@
 class myApp extends StatelessWidget {
   int l =0 ;
+  int mx =0 ;
+  int mx =0 ;
+  double i =  3.2;
+  double i =  3.2;
+  m =0 ;
   Widget build(BuildContext context) {
-  String m ='0' ;
     return Scaffold(
     body : Container()
         );
   }
 }
 class myApp extends StatelessWidget {
-  int l = 0 ;
+int z =0 ;
   Widget build(BuildContext context) {
-  int m = 0 ;
-  mm = 1;
+
     return Scaffold(
     body : Container()
         );

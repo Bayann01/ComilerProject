@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TestVisitor extends dartParserBaseVisitor {
-    sympolTable sympolTable = new sympolTable();
+   public static sympolTable sympolTable = new sympolTable();
 
     @Override
     public Constant visitNumberCosnt(dartParser.NumberCosntContext ctx) {
@@ -45,7 +45,14 @@ public class TestVisitor extends dartParserBaseVisitor {
     public decleration visitDeclINT(dartParser.DeclINTContext ctx) {
         String id = ctx.IDENTIFIER().getText();
         String type = ctx.INTTYPE().getText();
+
         int value = Integer.parseInt(ctx.INT().toString());
+        if (sympolTable.variableExistsInCurrentScope(id)) {
+            System.err.println("Variable '" + id + "' is already declared in the current scope.");
+        } else {
+            sympolTable.addVariableToCurrentScope(id);
+        }
+
         DeclerationVarINT integer = new DeclerationVarINT(id, type, value);
         Map<String, Object> m = new HashMap<>();
         m.put("INT", integer);
@@ -57,7 +64,12 @@ public class TestVisitor extends dartParserBaseVisitor {
     public decleration visitDecldouble(dartParser.DecldoubleContext ctx) {
         String id = ctx.IDENTIFIER().getText();
         String type = ctx.DOUBLETYPE().getText();
-        int value = Integer.parseInt(ctx.NUMBER().toString());
+        double value = Double.parseDouble(ctx.NUMBER().toString());
+        if (sympolTable.variableExistsInCurrentScope(id)) {
+            System.err.println("Variable '" + id + "' is already declared in the current scope.");
+        } else {
+            sympolTable.addVariableToCurrentScope(id);
+        }
         DeclerationVarDouble d = new DeclerationVarDouble(id, type, value);
         Map<String, Object> m = new HashMap<>();
         m.put("Double", d);
@@ -70,6 +82,11 @@ public class TestVisitor extends dartParserBaseVisitor {
         String id = ctx.IDENTIFIER().getText();
         String type = ctx.STRINGTYPE().getText();
         String value = ctx.SingleLineString().toString();
+        if (sympolTable.variableExistsInCurrentScope(id)) {
+            System.err.println("Variable '" + id + "' is already declared in the current scope.");
+        } else {
+            sympolTable.addVariableToCurrentScope(id);
+        }
         DeclerationVarString s = new DeclerationVarString(id, type, value);
         Map<String, Object> m = new HashMap<>();
         m.put("String", s);
@@ -89,8 +106,13 @@ public class TestVisitor extends dartParserBaseVisitor {
     @Override
     public decleration visitDeclbool(dartParser.DeclboolContext ctx) {
         String id = ctx.IDENTIFIER().getText();
-        String type = ctx.BOOLTYPE().getText();
+        String type = ctx.BoolTYPE().getText();
         boolean value = Boolean.parseBoolean(ctx.BOOL().toString());
+        if (sympolTable.variableExistsInCurrentScope(id)) {
+            System.err.println("Variable '" + id + "' is already declared in the current scope.");
+        } else {
+            sympolTable.addVariableToCurrentScope(id);
+        }
         DeclerationVarBoolean b = new DeclerationVarBoolean(id, type, value);
         Map<String, Object> m = new HashMap<>();
         m.put("bool", b);
@@ -476,9 +498,10 @@ public class TestVisitor extends dartParserBaseVisitor {
         ListViewScrolling r = new ListViewScrolling(axis);
         return r;
     }
-
     @Override
     public Object visitWidgetclass(dartParser.WidgetclassContext ctx) {
+        sympolTable.enterScope();
+
         String Name = ctx.IDENTIFIER().getText();
         String Type = ctx.TYPEWIDGET().getText();
         WidgetClass WC = new WidgetClass(Name, Type);
@@ -488,6 +511,9 @@ public class TestVisitor extends dartParserBaseVisitor {
         Map<String, Object> m = new HashMap<>();
         m.put("Class", WC);
         sympolTable.getMap().add(m);
+    //        sympolTable.exitScope();
+    //    System.out.println(sympolTable.scopeStack.toString());
+    //    System.out.println(sympolTable.scopeStack.get(1).variables);
         return WC;
     }
 
@@ -497,11 +523,10 @@ public class TestVisitor extends dartParserBaseVisitor {
         String home = ctx.IDENTIFIER().getText();
         flutterProgramm fG = new flutterProgramm(home);
         for (int i = 0; i < ctx.widgetclass().size(); i++) {
-            //System.out.println(ctx.widgetclass());
             sc = (WidgetClass) visit((ParseTree) ctx.widgetclass().get(i));
             fG.addWidget(sc);
         }
-        Semantic_Error semantic = new Semantic_Error(sympolTable);
+        Semantic_Error semantic = new Semantic_Error(sympolTable.getInstance());
         semantic.check();
         return fG;
     }
@@ -528,6 +553,7 @@ public class TestVisitor extends dartParserBaseVisitor {
         Map<String, Object> m = new HashMap<>();
         m.put("Function", f);
         sympolTable.getMap().add(m);
+
         return f;
     }
 

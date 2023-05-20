@@ -114,7 +114,7 @@ public class dartParser extends Parser {
 			"'let'", "'library'", "'List'", "'mixin'", "'native'", "'new'", "'null'", 
 			"'of'", "'on'", "'operator'", "'part'", "'required'", "'rethrow'", "'return'", 
 			"'set'", "'show'", "'shape'", "'static'", "'super'", "'switch'", "'sync'", 
-			"'Stack'", "'this'", "'throw'", "'true'", "'try'", "'typedef'", "'int'", 
+			"'Stack'", "'this'", "'throw'", null, "'try'", "'typedef'", "'int'", 
 			"'double'", "'float'", "'String'", "'bool'", "'Queue'", "'var'", "'void'", 
 			"'while'", "'with'", "'Widget'", "'yield'", "'main'", null, null, "'public'", 
 			"'protect'", "'private'", "'Image'", "'image'", "'NetWorkImage'", "'TextFormField'", 
@@ -257,7 +257,7 @@ public class dartParser extends Parser {
 				setState(168);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
+				while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (BoolTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
 					{
 					{
 					setState(165);
@@ -1525,7 +1525,7 @@ public class dartParser extends Parser {
 			setState(377);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
+			while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (BoolTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
 				{
 				{
 				setState(374);
@@ -2095,7 +2095,7 @@ public class dartParser extends Parser {
 				declSTRING();
 				}
 				break;
-			case BOOLTYPE:
+			case BoolTYPE:
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(429);
@@ -2473,7 +2473,7 @@ public class dartParser extends Parser {
 	}
 
 	public static class DeclboolContext extends ParserRuleContext {
-		public TerminalNode BOOLTYPE() { return getToken(dartParser.BOOLTYPE, 0); }
+		public TerminalNode BoolTYPE() { return getToken(dartParser.BoolTYPE, 0); }
 		public TerminalNode IDENTIFIER() { return getToken(dartParser.IDENTIFIER, 0); }
 		public TerminalNode EQ() { return getToken(dartParser.EQ, 0); }
 		public TerminalNode BOOL() { return getToken(dartParser.BOOL, 0); }
@@ -2504,7 +2504,7 @@ public class dartParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(473);
-			match(BOOLTYPE);
+			match(BoolTYPE);
 			setState(474);
 			match(IDENTIFIER);
 			setState(475);
@@ -2836,7 +2836,7 @@ public class dartParser extends Parser {
 			setState(524);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
+			while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (BoolTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
 				{
 				{
 				setState(521);
@@ -2960,7 +2960,7 @@ public class dartParser extends Parser {
 			setState(547);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
+			while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (BoolTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
 				{
 				{
 				setState(544);
@@ -3560,7 +3560,7 @@ public class dartParser extends Parser {
 			setState(612);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
+			while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (BoolTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
 				{
 				{
 				setState(609);
@@ -4069,7 +4069,7 @@ public class dartParser extends Parser {
 			setState(685);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
+			while (((((_la - 25)) & ~0x3f) == 0 && ((1L << (_la - 25)) & ((1L << (MM - 25)) | (1L << (PLPL - 25)) | (1L << (CLASS_ - 25)) | (1L << (DO_ - 25)))) != 0) || ((((_la - 89)) & ~0x3f) == 0 && ((1L << (_la - 89)) & ((1L << (FOR_ - 89)) | (1L << (IF_ - 89)) | (1L << (INTTYPE - 89)) | (1L << (DOUBLETYPE - 89)) | (1L << (FLOATTYPE - 89)) | (1L << (STRINGTYPE - 89)) | (1L << (BoolTYPE - 89)) | (1L << (VARTYPE - 89)) | (1L << (VOID_ - 89)) | (1L << (WHILE_ - 89)) | (1L << (WIDGET_ - 89)))) != 0) || _la==IDENTIFIER || _la==BOOLTYPE) {
 				{
 				{
 				setState(682);
@@ -7770,7 +7770,7 @@ public class dartParser extends Parser {
 		"\u01d3\u01d4\u0005\u0082\u0000\u0000\u01d4\u01d5\u0005\u00c0\u0000\u0000"+
 		"\u01d5\u01d6\u0005\u0011\u0000\u0000\u01d6\u01d7\u0005\u00bc\u0000\u0000"+
 		"\u01d7\u01d8\u0005.\u0000\u0000\u01d85\u0001\u0000\u0000\u0000\u01d9\u01da"+
-		"\u0005\u00c4\u0000\u0000\u01da\u01db\u0005\u00c0\u0000\u0000\u01db\u01dc"+
+		"\u0005\u0084\u0000\u0000\u01da\u01db\u0005\u00c0\u0000\u0000\u01db\u01dc"+
 		"\u0005\u0011\u0000\u0000\u01dc\u01dd\u0005\u008e\u0000\u0000\u01dd\u01de"+
 		"\u0005.\u0000\u0000\u01de7\u0001\u0000\u0000\u0000\u01df\u01e0\u0005\u0086"+
 		"\u0000\u0000\u01e0\u01e1\u0005\u00c0\u0000\u0000\u01e1\u01e2\u0005\u0011"+

@@ -67,7 +67,7 @@ declINT : INTTYPE IDENTIFIER EQ INT SC;
 decldouble : DOUBLETYPE IDENTIFIER EQ NUMBER  SC;
 declSTRING : STRINGTYPE IDENTIFIER EQ SingleLineString SC;
 declFLOAT: FLOATTYPE IDENTIFIER EQ NUMBER SC ;
-declbool : BOOLTYPE IDENTIFIER EQ BOOL SC ;
+declbool : BoolTYPE IDENTIFIER EQ BOOL SC ;
 declVar: VARTYPE IDENTIFIER EQ constatnt SC;
 parametersFUNCTION : INTTYPE IDENTIFIER
                    | DOUBLETYPE IDENTIFIER
@@ -77,6 +77,7 @@ parametersFUNCTION : INTTYPE IDENTIFIER
                    | VARTYPE IDENTIFIER
                    | IDENTIFIER CONTEXT
                    ;
+
 assignment :  IDENTIFIER EQ exprission SC ;
 functionVoid: VOID_ IDENTIFIER OP (parametersFUNCTION (C parametersFUNCTION)*)? CP OBC line* CBC;
 function: datatypes IDENTIFIER OP (parametersFUNCTION ( C parametersFUNCTION)*)? CP OBC line* RETURN_ (IDENTIFIER|scaffold) SC CBC;
