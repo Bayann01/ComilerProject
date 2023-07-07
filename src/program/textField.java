@@ -4,19 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class textField extends widget{
-    List <textFieldProperties> t;
+    public List <textFieldProperties> tp;
 
     public textField() {
-        t = new ArrayList<>();
+        tp = new ArrayList<>();
     }
     public  void addtextFieldProperties (textFieldProperties t1){
-        t.add(t1);
+        tp.add(t1);
     }
 
     @Override
     public String toString() {
-        return "textField{" +
-                "textfieldprop" + t +
-                '}';
+        return "\ntextField{" +
+                "\ntextfieldprop" + tp +
+                "\n}";
     }
 }

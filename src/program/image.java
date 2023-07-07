@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class image extends widget {
-    List<imageproperties> ip;
+    public List<imageproperties> ip;
 
     public image() {
         ip = new ArrayList<>();
@@ -12,6 +12,11 @@ public class image extends widget {
 
     public void addimageproperty(imageproperties i) {
         ip.add(i);
+    }
+
+    public String generate() {
+
+        return null;
     }
 
     @Override

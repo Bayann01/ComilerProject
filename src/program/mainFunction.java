@@ -3,8 +3,8 @@ package program;
 import java.util.ArrayList;
 
 public class mainFunction extends prog {
-    ArrayList<exprission> exeprs;
-    ArrayList<line> lines;
+    public ArrayList<exprission> exeprs;
+    public ArrayList<line> lines;
 
     public mainFunction() {
         this.exeprs = new ArrayList<>();

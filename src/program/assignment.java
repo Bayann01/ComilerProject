@@ -1,7 +1,5 @@
 package program;
 
-import antlr.dartParser;
-
 public class assignment extends statmnet {
     public String ID;
 
@@ -14,10 +12,10 @@ public class assignment extends statmnet {
 
     @Override
     public String toString() {
-        return "assignment{" +
-                "ID='" + ID + '\'' +
-                ", value='" + value + '\'' +
-                '}';
+        return "\nassignment{" +
+                "\nID='" + ID + '\'' +
+                ", \nvalue='" + value + '\'' +
+                "\n}";
     }
 }
 

@@ -1,7 +1,7 @@
 package program;
 
 public class imageproperty extends imageproperties{
-String url;
+public String url;
 
     public imageproperty(String url) {
         this.url = url;
@@ -10,7 +10,7 @@ String url;
     @Override
     public String toString() {
         return "imageproperty{" +
-                "url='" + url + '\'' +
+                "url= " + url +
                 '}';
     }
 }

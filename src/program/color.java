@@ -1,7 +1,7 @@
 package program;
 
-public class color extends  containerproperties{
-    String c ;
+public class color {
+    public String c ;
 
     public color(String c) {
         this.c = c;

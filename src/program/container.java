@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class container extends widget {
-    widget c;
-    List<containerproperties> containerproperties;
+    public widget c;
+    public List<containerproperties> containerproperties;
+    public static int  id ;
 
     public container(widget c) {
         this.c = c;
         containerproperties = new ArrayList<>();
+
     }
 
     public container() {

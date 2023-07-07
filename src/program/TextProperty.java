@@ -9,8 +9,8 @@ String text;
 
     @Override
     public String toString() {
-        return "TextProperty{" +
-                "text='" + text + '\'' +
-                '}';
+        return "\nTextProperty{" +
+                "\ntext='" + text + '\'' +
+                "\n}";
     }
 }

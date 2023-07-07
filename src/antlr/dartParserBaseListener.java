@@ -1,4 +1,4 @@
-// Generated from C:/Users/Bayan/Desktop/CompilerProject1/src/antlr\dartParser.g4 by ANTLR 4.10.1
+// Generated from C:/Users/HP/Desktop/Intellij Projects/finalCompilerProject/src/antlr\dartParser.g4 by ANTLR 4.10.1
 package antlr;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -40,6 +40,42 @@ public class dartParserBaseListener implements dartParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterClassName(dartParser.ClassNameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitClassName(dartParser.ClassNameContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterConstructor(dartParser.ConstructorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitConstructor(dartParser.ConstructorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCreateObject(dartParser.CreateObjectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCreateObject(dartParser.CreateObjectContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterClassDecl(dartParser.ClassDeclContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -76,30 +112,6 @@ public class dartParserBaseListener implements dartParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNormalConstructor(dartParser.NormalConstructorContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitNormalConstructor(dartParser.NormalConstructorContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterFactoryConstructor(dartParser.FactoryConstructorContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFactoryConstructor(dartParser.FactoryConstructorContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterConstructorBody(dartParser.ConstructorBodyContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -112,30 +124,6 @@ public class dartParserBaseListener implements dartParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFactoryConstructorBody(dartParser.FactoryConstructorBodyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFactoryConstructorBody(dartParser.FactoryConstructorBodyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterOptionalParameters(dartParser.OptionalParametersContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitOptionalParameters(dartParser.OptionalParametersContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterParametersConstructor(dartParser.ParametersConstructorContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -143,18 +131,6 @@ public class dartParserBaseListener implements dartParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitParametersConstructor(dartParser.ParametersConstructorContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterConstructorName(dartParser.ConstructorNameContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConstructorName(dartParser.ConstructorNameContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -772,6 +748,30 @@ public class dartParserBaseListener implements dartParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterButton(dartParser.ButtonContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitButton(dartParser.ButtonContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextWidget(dartParser.TextWidgetContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextWidget(dartParser.TextWidgetContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterTextField(dartParser.TextFieldContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -796,6 +796,54 @@ public class dartParserBaseListener implements dartParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterTextFieldHintTextl(dartParser.TextFieldHintTextlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextFieldHintTextl(dartParser.TextFieldHintTextlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextFieldBorderRadiusl(dartParser.TextFieldBorderRadiuslContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextFieldBorderRadiusl(dartParser.TextFieldBorderRadiuslContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextFieldonsubmitl(dartParser.TextFieldonsubmitlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextFieldonsubmitl(dartParser.TextFieldonsubmitlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextFieldObscureTextl(dartParser.TextFieldObscureTextlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextFieldObscureTextl(dartParser.TextFieldObscureTextlContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterTextFieldControllerProperty(dartParser.TextFieldControllerPropertyContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -803,6 +851,54 @@ public class dartParserBaseListener implements dartParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitTextFieldControllerProperty(dartParser.TextFieldControllerPropertyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextFieldHintText(dartParser.TextFieldHintTextContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextFieldHintText(dartParser.TextFieldHintTextContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextFieldBorderRadius(dartParser.TextFieldBorderRadiusContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextFieldBorderRadius(dartParser.TextFieldBorderRadiusContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextFieldOnsubmit(dartParser.TextFieldOnsubmitContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextFieldOnsubmit(dartParser.TextFieldOnsubmitContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextFieldObscureText(dartParser.TextFieldObscureTextContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextFieldObscureText(dartParser.TextFieldObscureTextContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -904,13 +1000,13 @@ public class dartParserBaseListener implements dartParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterColorl(dartParser.ColorlContext ctx) { }
+	@Override public void enterBoxDecorationl(dartParser.BoxDecorationlContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitColorl(dartParser.ColorlContext ctx) { }
+	@Override public void exitBoxDecorationl(dartParser.BoxDecorationlContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -983,6 +1079,30 @@ public class dartParserBaseListener implements dartParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitWidthcontainer(dartParser.WidthcontainerContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterContainerBorderRadius(dartParser.ContainerBorderRadiusContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitContainerBorderRadius(dartParser.ContainerBorderRadiusContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBoxDecoration(dartParser.BoxDecorationContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBoxDecoration(dartParser.BoxDecorationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1156,78 +1276,6 @@ public class dartParserBaseListener implements dartParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterNavigatorPushExpr(dartParser.NavigatorPushExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitNavigatorPushExpr(dartParser.NavigatorPushExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterMaterialPageRouteExpr(dartParser.MaterialPageRouteExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitMaterialPageRouteExpr(dartParser.MaterialPageRouteExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterPageBuilderExpr(dartParser.PageBuilderExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitPageBuilderExpr(dartParser.PageBuilderExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterPageInstanceExpr(dartParser.PageInstanceExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitPageInstanceExpr(dartParser.PageInstanceExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterTypeName(dartParser.TypeNameContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitTypeName(dartParser.TypeNameContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterNavigatorPopExpr(dartParser.NavigatorPopExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitNavigatorPopExpr(dartParser.NavigatorPopExprContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterTextButtonExpr(dartParser.TextButtonExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -1300,6 +1348,66 @@ public class dartParserBaseListener implements dartParserListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterAlignPos(dartParser.AlignPosContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAlignPos(dartParser.AlignPosContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextAlign(dartParser.TextAlignContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextAlign(dartParser.TextAlignContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextStyle(dartParser.TextStyleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextStyle(dartParser.TextStyleContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextColor(dartParser.TextColorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextColor(dartParser.TextColorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTextSize(dartParser.TextSizeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTextSize(dartParser.TextSizeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterStringLiteralExpr(dartParser.StringLiteralExprContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -1307,6 +1415,66 @@ public class dartParserBaseListener implements dartParserListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitStringLiteralExpr(dartParser.StringLiteralExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNavigatorPushExpr(dartParser.NavigatorPushExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNavigatorPushExpr(dartParser.NavigatorPushExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMaterialPageRouteExpr(dartParser.MaterialPageRouteExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMaterialPageRouteExpr(dartParser.MaterialPageRouteExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPageBuilderExpr(dartParser.PageBuilderExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPageBuilderExpr(dartParser.PageBuilderExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPageInstanceExpr(dartParser.PageInstanceExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPageInstanceExpr(dartParser.PageInstanceExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterNavigatorPopExpr(dartParser.NavigatorPopExprContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitNavigatorPopExpr(dartParser.NavigatorPopExprContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

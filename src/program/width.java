@@ -1,7 +1,7 @@
 package program;
 
 public class width extends imageproperties{
-    double w;
+    public double w;
 
     public width(double w) {
         this.w = w;

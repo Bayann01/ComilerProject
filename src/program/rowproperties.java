@@ -3,7 +3,7 @@ package program;
 import java.util.ArrayList;
 
 public class rowproperties extends row {
-    rowChildren rowChildren;
+    public rowChildren rowChildren;
     ArrayList<rowProperty> rowProperty;
 
     public rowproperties(program.rowChildren rowChildren) {

@@ -1,7 +1,7 @@
 package program;
 
 public class widthcontainer extends containerproperties {
-    double w;
+    public double w;
 
     public widthcontainer(double w) {
         this.w = w;

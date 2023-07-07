@@ -1,0 +1,40 @@
+class App1 extends StatelessWidget {
+    String k = "";
+    int j = 0;
+    i = 10;
+
+
+    App1() {}
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: TextButton(
+                      onPressed: (
+                                     ()=> {
+                                     Navigator.push(
+                                     context,
+                                     MaterialPageRoute(builder: (context) => App2(k , i);),
+                                     );
+                                     } ),
+                                     child: Text('Go To Next Page'),) );
+    }
+}
+
+class App2 extends StatelessWidget {
+    int x = 0;
+    String s = "";
+    App22(int x , String s) {
+        this.x = x;
+        this.s = s;
+    }
+    Widget build(BuildContext context) {
+        return Scaffold(
+            body: Text('Hello')
+            );
+    }
+}
+
+void main(){
+    Test t =  Test();
+    int x = 0;
+    runApp( MaterialApp( home: test1() ) );
+}

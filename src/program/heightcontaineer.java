@@ -1,7 +1,7 @@
 package program;
 
 public class heightcontaineer extends containerproperties{
-    double h;
+    public double h;
 
     public heightcontaineer(double h) {
         this.h = h;
@@ -9,8 +9,8 @@ public class heightcontaineer extends containerproperties{
 
     @Override
     public String toString() {
-        return "heightcontainer{" +
-                "h=" + h +
-                '}';
+        return "\nheightcontainer{" +
+                "\nh=" + h +
+                "\n}";
     }
 }

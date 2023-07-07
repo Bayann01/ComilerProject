@@ -1,4 +1,4 @@
 package program;
 
-public class imageproperties {
+public class imageproperties extends image {
 }

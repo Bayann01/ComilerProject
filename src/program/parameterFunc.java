@@ -1,8 +1,8 @@
 package program;
 
 public class parameterFunc extends function{
-String type;
-String ID ;
+    public String type;
+    public String ID ;
 
     public parameterFunc(String type, String ID) {
         this.type = type;

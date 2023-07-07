@@ -1,12 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="824ba1aa-6093-4f3c-8a2f-4ce89c6a3375" name="Changes" comment="finish symbol table">
+    <list default="true" id="824ba1aa-6093-4f3c-8a2f-4ce89c6a3375" name="Changes" comment="finished">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/antlr_4_10_1_complete__2_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/antlr-4.10.1-complete.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/class_test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/product_test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/register_test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/scope_test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/App1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/App2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/Test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/myApp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/myApp2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/myApp3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output/test1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/codegeneration/CodeGeneration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/BoxDecoration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/Childexpr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/Constauctorbody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/ContainerBorderRadius.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/CreateObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/MaterialPageRouteNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/NavigatorPushNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/OnPressedexpr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/PageInstanceNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/StringLiteralExpr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/TextButtonexpr.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/TextStyle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/TextWidget.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/classConstructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/constructorwithoutbody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/textFieldBorderRadiusProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/textFieldHintTextProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/textFieldObscureTextProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/program/textFieldOnsubmitProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/test6.txt" beforeDir="false" afterPath="$PROJECT_DIR$/files/test6.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ComilerProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ComilerProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/test1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/test2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/test3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/test4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/test5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/test6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/SyntaxError.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/SyntaxError.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Semantic_Error.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Semantic_Error.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SympolTable/sympolTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SympolTable/sympolTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Visitor/TestVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visitor/TestVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/dartLexer.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartLexer.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/antlr/dartLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartLexer.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/antlr/dartLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartLexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/antlr/dartLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartLexer.tokens" afterDir="false" />
@@ -14,7 +56,43 @@
       <change beforePath="$PROJECT_DIR$/src/antlr/dartParser.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartParser.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/antlr/dartParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/antlr/dartParser.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartParser.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/dartParserBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartParserBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/dartParserBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartParserBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/dartParserListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartParserListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/dartParserVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/dartParserVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/gen/dartLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/gen/dartLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/gen/dartLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/gen/dartLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/antlr/gen/dartLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/antlr/gen/dartLexer.tokens" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/DeclerationVarString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/DeclerationVarString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/Scaffold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/Scaffold.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/TextProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/TextProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/WidgetClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/WidgetClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/assignment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/assignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/column.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/columnChildren.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/columnChildren.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/columnProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/columnProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/flutterProgramm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/flutterProgramm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/function.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/functioncall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/functioncall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/height.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/height.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/heightcontaineer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/heightcontaineer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/imageproperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/imageproperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/imageproperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/imageproperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/mainFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/mainFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/navigator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/parameterFunc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/parameterFunc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/row.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/row.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/rowChildren.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/rowChildren.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/rowproperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/rowproperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/textField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/textField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/textFieldControllerProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/textFieldControllerProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/textFieldProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/textFieldProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/width.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/width.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/program/widthcontainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/program/widthcontainer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +135,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Bayan/Desktop/Antlr/antlr-4.10.1-complete.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15136719&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
@@ -201,6 +279,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="finish symbol table" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish symbol table" />
+    <MESSAGE value="finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished" />
   </component>
 </project>

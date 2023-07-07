@@ -1,7 +1,7 @@
 package program;
 
 public class height extends imageproperties{
-    double h;
+   public double h;
 
     public height(double h) {
         this.h = h;

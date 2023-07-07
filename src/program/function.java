@@ -7,9 +7,10 @@ import java.util.List;
 
 public class function extends line {
     String type;
-    String name;
-    Scaffold scaffold ;
-    List<parameterFunc> parameters;
+    public String name;
+
+    public Scaffold scaffold ;
+    public List<parameterFunc> parameters;
     List<line> body=new  ArrayList<>();
     public function(String type, String name ,Scaffold sc) {
         this.type = type;
@@ -36,9 +37,9 @@ public function(){}
         return "\nfunction{" +
                 "\ntype='" + type + '\'' +
                 ", \nname='" + name + '\'' +
-                ", \nscaffold=" + scaffold +
                 ", \nparameters=" + parameters +
                 ", \nbody=" + body +
-                "\n}";
+                ", \nscaffold=" + scaffold +
+                             "\n}";
     }
 }

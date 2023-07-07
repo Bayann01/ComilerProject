@@ -5,16 +5,19 @@ import java.util.List;
 
 public class WidgetClass {
     public String name ;
-    String Type ;
-    ArrayList<line> l = new ArrayList<>() ;
+    public String Type ;
+
+    public ArrayList<line> l = new ArrayList<>() ;
+    public classConstructor cc;
 
     public WidgetClass() {
         l = new ArrayList<>();
     }
 
-    public WidgetClass(String name, String type) {
+    public WidgetClass(String name, String type,classConstructor c) {
         this.name = name;
         Type = type;
+        this.cc = c;
     }
     public void addline(line ll ){
         l.add(ll);
@@ -22,11 +25,12 @@ public class WidgetClass {
 
     @Override
     public String toString() {
-        return "\nMainClass{" +
+        return "\nWidgetClass{" +
                 "\nname='" + name + '\'' +
                 ", \nType='" + Type + '\'' +
                 ", \nlines=" + l +
-                '}';
+                ", \nconstructor=" + cc +
+                "\n}";
     }
 }
 

@@ -1,7 +1,7 @@
 package program;
 
 public class column extends widget{
-    columnProperties columnProperties;
+    public columnProperties columnProperties;
 
     public column(program.columnProperties columnProperties) {
         this.columnProperties = columnProperties;

@@ -1,32 +1,42 @@
 parser grammar dartParser;
 options { tokenVocab= dartLexer ; }
+
+
 prog :  functionMain line*
         |line* functionMain
         |functionMain
-         ;
+        ;
+
 line :  statment     // #statement
         |ifBlock        // #ifblock
         |whileBlock     // #whileblockr
         |function       // #functionn
-        |functionVoid   // #functionvoid
+        |functionVoid
+        |functionCall
         |forBlock       // #forblock
         |doStatement    // #dostatement
         |array          // #arrayy
-        |classDecl      // #classdecl
+        |classDecl
+        |createObject
+              // #classdecl
         ;
+//////////////////////////////////////////////////////////
+
+className : IDENTIFIER;
+constructor : className OP (( IDENTIFIER (C IDENTIFIER)* ) )? CP SC ;
+createObject : className IDENTIFIER EQ constructor;
+
+///////////////////////////////////////////////////////////
+
 ///////////////////////////////////////////////////////////
 classDecl: CLASS_ IDENTIFIER (EXTENDS_ TYPEWIDGET)? OBC classBody CBC;
 classBody: ((function | decl) )* (classConstructor)* (function)* (functionVoid)*;
-classConstructor: normalConstructor   // #NORMALCONSTRUCTOR
-                 |factoryConstructor //  #FACTORYCONSTRUCTOR
-                 ;
-normalConstructor: constructorName OP parametersConstructor CP OBC constructorBody CBC;
-factoryConstructor: FACTORY_ constructorName OP parametersConstructor CP OBC factoryConstructorBody CBC;
-constructorBody: ((THIS_ D)? assignment )* (decl)* (function)* (functionCall )*;
-factoryConstructorBody: ((THIS_ D)? assignment SC)* (decl)* (function)* RETURN_ constructorName OP exprission* CP SC;
-optionalParameters: OBC ( parametersFUNCTION (C parametersFUNCTION)* ) CBC;
-parametersConstructor: ( parametersFUNCTION (C parametersFUNCTION)* ) (C optionalParameters ) | ( parametersFUNCTION (C parametersFUNCTION)* )? | optionalParameters?;
-constructorName: IDENTIFIER (D IDENTIFIER)?;
+
+
+classConstructor:  IDENTIFIER OP (( parametersFUNCTION (C parametersFUNCTION)* ) )? CP OBC constructorBody CBC  ;
+constructorBody: ((THIS_ D)? assignment )* ;
+parametersConstructor: ( parametersFUNCTION (C parametersFUNCTION)* ) ;
+
 ////////////////////////////////////////////////////////
 functionMain:  VOID_ Main OP (datatypes exprission( C datatypes exprission)*)? CP OBC line* CBC;
 statment :
@@ -101,24 +111,24 @@ exprission:constatnt                            #constatntt
           |exprission SL exprission             #exprminusexpr
           |exprission MINUS exprission          #exprminusexpr
           |exprission boolOPERATIONS exprission #exprboolexpr
-          |IDENTIFIER                           #identifier
-          ;
+          |IDENTIFIER                           #identifier         ;
 block : OBC line* CBC;
 
 constatnt : NUMBER                         #numberCosnt
           | BOOL                           #boolConst
           | SingleLineString               #stringConst
-          | INT                            #intConst;
+          | INT                            #intConst
+          ;
 
 array : INTTYPE IDENTIFIER EQ OB INT (C INT)* CB                                          #arrayInteger
       | (DOUBLETYPE|FLOATTYPE) IDENTIFIER EQ OB NUMBER (C NUMBER)* CB                     #arrayDouble
       | STRINGTYPE IDENTIFIER EQ OB SingleLineString (C SingleLineString)* CB             #arrayString
       | BOOLTYPE IDENTIFIER EQ OB BOOL (C BOOL)* CB                                       #arrayBool;
 
-widgetclass : CLASS_ IDENTIFIER EXTENDS_ TYPEWIDGET  '{' line*  '}'   ;
-flutterProgram : widgetclass* VOID_ Main '(' ')' '{' RUNAPP '(' MATERIALAPP '(' HOME ':' IDENTIFIER '('')' ')' ')' ';' '}';
+widgetclass : CLASS_ IDENTIFIER EXTENDS_ TYPEWIDGET  '{'line* classConstructor  line*  '}'   ;
+flutterProgram : widgetclass* VOID_ Main '(' ')' '{' line* RUNAPP '(' MATERIALAPP '(' HOME ':' IDENTIFIER '('')' ')' ')' ';' '}';
+
 scaffold : SCAFFOLD '(' BODY ':'  widgets ')' ;
-//body:  ;
 widgets:textField   #textFieldl
        |image       #imagel
        |row         #rowl
@@ -126,27 +136,47 @@ widgets:textField   #textFieldl
        |container   #containerl
        |listView    #listviewl
        |scaffold    #scaffoldl
-//       |textButtonExpr #button
+       |textButtonExpr #button
+       |textExpr  # textWidget
        ;
 //////////////textfield//////////
+
 textField
-    : TEXTFORMFIELD_ '(' textFieldProperties (',' textFieldProperties )*  ')'
+    : TEXTFORMFIELD_ '(' textFieldProperties  (',' textFieldProperties )*  ')'
     ;
 textFieldProperties
     :  textFieldControllerProperty #textFieldControllerPropertyl
+    |  textFieldHintText #textFieldHintTextl
+    |  textFieldBorderRadius #textFieldBorderRadiusl
+    |  textFieldOnsubmit #textFieldonsubmitl
+    |  textFieldObscureText #textFieldObscureTextl
     ;
+
+
 
 textFieldControllerProperty
     : CONTROLLER_ ':' IDENTIFIER
     ;
 
+textFieldHintText
+    : HINTTEXT_ ':'  SingleLineString
+    ;
+
+textFieldBorderRadius
+    : BORDERRADIUS_ ':'  NUMBER
+    ;
+textFieldOnsubmit
+    :OnFieldSubmitted ':' '(' IDENTIFIER')' '{'assignment'}'
+    ;
+
+textFieldObscureText : OBSCURETEXT_ ':' ( TRUE_ | FALSE_ );
 
 ////////////image///////////////////
 image:Image_ '('  (imageProperties (','imageProperties)* )?   ')';
 imageProperties
     : imageproperty #imagepropertyl
     | height   #heightl
-    |width  #widthl
+    | width  #widthl
     ;
 
  imageproperty:
@@ -156,19 +186,21 @@ imageProperties
  width:
  WIDTH_ ':'NUMBER;
  ///////container////////////
- container :(CONTAINER_ '(' ( containerproperties* ',' child )?')' ) | (CONTAINER_ '('( child ',' containerproperties* )? ')'  );
- containerproperties
-          :color #colorl
+ container :(CONTAINER_ '(' ( (containerproperties)* ',' child )?')' ) | (CONTAINER_ '('( child ',' (containerproperties)* )? ')'  );
+ containerproperties:
+           boxDecoration    #boxDecorationl
           |heightcontainer  #heightcontainerl
           |widthcontainer   #widthcontainerl
-           ;
+          ;
 
  child : CHILD_ ':' widgets #childl ;
- color :COLOR_ ':' COLORS_ D IDENTIFIER ;
+ color :COLOR_ ':' COLORS_ D IDENTIFIER ',';
  heightcontainer:
-  HEIGHT_ ':' NUMBER;
-  widthcontainer:
-  WIDTH_ ':'NUMBER;
+  HEIGHT_ ':' NUMBER ',';
+ widthcontainer:
+  WIDTH_ ':'NUMBER ',';
+  containerBorderRadius : BORDERRADIUS_ ':' CIRCULAR_ '(' NUMBER ')' ',';
+  boxDecoration : Decoration ':' BOXDECORATION_ '('  (color)?  (containerBorderRadius)? ')' ',';
 
 //ROW&COLUMN
 row : ROW_ '(' rowProperties (',' rowProperties)*  ')'  ;
@@ -200,6 +232,48 @@ listViewProperties: childrenlist?  scrollDirection?
 childrenlist  :CHILDREN ':' '['  (widgets (',' widgets)*)?  ']'  #listChildren;
 scrollDirection : SCROLLDIRECTION ':' AXIS D (HORIZONTAL | VERTICAL)    #listScrolling;
 
+
+
+
+textButtonExpr
+    : TextButton '(' onPressedExpr  childExpr ')'
+    ;
+
+onPressedExpr
+    : OnPressed ':' '(' functionExpr ')' ','
+    ;
+
+childExpr
+    : 'child' ':' textExpr ','
+    ;
+
+functionExpr
+    : '(' ')' '=>' blockExpr
+    ;
+blockExpr
+    : '{'(navigatorPushExpr | navigatorPopExpr )'}'
+    ;
+
+textExpr
+    : Text '(' stringLiteralExpr  (',' STYLE ':' textStyle)?  (',' TEXTALIGN_P ':' textAlign)?')'
+    ;
+
+alignPos : 'center'|'start'|'end';
+
+textAlign : TEXTALIGN'.'alignPos;
+
+textStyle : TextStyle '(' (textColor ',')?  (textSize ',')?')';
+
+textColor : COLOR_ ':' COLORS_'.'IDENTIFIER;
+
+textSize : FONTSIZE ':' NUMBER;
+
+stringLiteralExpr
+   :
+   SingleLineString
+
+   ;
+
 navigatorPushExpr
     : Navigator '.' PUSH '(' CONTEXT ',' materialPageRouteExpr ')' ';'
     ;
@@ -214,41 +288,10 @@ pageBuilderExpr
 
 
 pageInstanceExpr
-    : typeName '(' ')'
+    : constructor
     ;
 
-typeName
-    : IDENTIFIER
-    ;
 
 navigatorPopExpr
      : Navigator '.'  '(' CONTEXT ')' ';'
      ;
-
-textButtonExpr
-    : TextButton '(' onPressedExpr ',' childExpr ')' ';'
-    ;
-
-onPressedExpr
-    : OnPressed ':' '(' functionExpr ')' ','
-    ;
-
-childExpr
-    : 'child' ':' textExpr ','
-    ;
-
-functionExpr
-    : '(' ')' '=>' blockExpr
-    ;
-
-blockExpr
-    : '{'navigatorPushExpr | navigatorPopExpr '}'
-    ;
-
-textExpr
-    : Text '(' stringLiteralExpr ')'
-    ;
-
-stringLiteralExpr
-    : SingleLineString
-    ;

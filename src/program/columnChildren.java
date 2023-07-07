@@ -3,7 +3,7 @@ package program;
 import java.util.ArrayList;
 
 public class columnChildren extends columnProperties{
-    ArrayList<widget> W ;
+    public ArrayList<widget> W ;
 
     public columnChildren() {
         W = new ArrayList<>();

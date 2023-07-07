@@ -1,4 +1,4 @@
-// Generated from C:/Users/Bayan/Desktop/CompilerProject1/src/antlr\dartParser.g4 by ANTLR 4.10.1
+// Generated from C:/Users/HP/Desktop/Intellij Projects/finalCompilerProject/src/antlr\dartParser.g4 by ANTLR 4.10.1
 package antlr;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -27,6 +27,36 @@ public interface dartParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitLine(dartParser.LineContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#className}.
+	 * @param ctx the parse tree
+	 */
+	void enterClassName(dartParser.ClassNameContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#className}.
+	 * @param ctx the parse tree
+	 */
+	void exitClassName(dartParser.ClassNameContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#constructor}.
+	 * @param ctx the parse tree
+	 */
+	void enterConstructor(dartParser.ConstructorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#constructor}.
+	 * @param ctx the parse tree
+	 */
+	void exitConstructor(dartParser.ConstructorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#createObject}.
+	 * @param ctx the parse tree
+	 */
+	void enterCreateObject(dartParser.CreateObjectContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#createObject}.
+	 * @param ctx the parse tree
+	 */
+	void exitCreateObject(dartParser.CreateObjectContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link dartParser#classDecl}.
 	 * @param ctx the parse tree
@@ -58,26 +88,6 @@ public interface dartParserListener extends ParseTreeListener {
 	 */
 	void exitClassConstructor(dartParser.ClassConstructorContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link dartParser#normalConstructor}.
-	 * @param ctx the parse tree
-	 */
-	void enterNormalConstructor(dartParser.NormalConstructorContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link dartParser#normalConstructor}.
-	 * @param ctx the parse tree
-	 */
-	void exitNormalConstructor(dartParser.NormalConstructorContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link dartParser#factoryConstructor}.
-	 * @param ctx the parse tree
-	 */
-	void enterFactoryConstructor(dartParser.FactoryConstructorContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link dartParser#factoryConstructor}.
-	 * @param ctx the parse tree
-	 */
-	void exitFactoryConstructor(dartParser.FactoryConstructorContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link dartParser#constructorBody}.
 	 * @param ctx the parse tree
 	 */
@@ -88,26 +98,6 @@ public interface dartParserListener extends ParseTreeListener {
 	 */
 	void exitConstructorBody(dartParser.ConstructorBodyContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link dartParser#factoryConstructorBody}.
-	 * @param ctx the parse tree
-	 */
-	void enterFactoryConstructorBody(dartParser.FactoryConstructorBodyContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link dartParser#factoryConstructorBody}.
-	 * @param ctx the parse tree
-	 */
-	void exitFactoryConstructorBody(dartParser.FactoryConstructorBodyContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link dartParser#optionalParameters}.
-	 * @param ctx the parse tree
-	 */
-	void enterOptionalParameters(dartParser.OptionalParametersContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link dartParser#optionalParameters}.
-	 * @param ctx the parse tree
-	 */
-	void exitOptionalParameters(dartParser.OptionalParametersContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link dartParser#parametersConstructor}.
 	 * @param ctx the parse tree
 	 */
@@ -117,16 +107,6 @@ public interface dartParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitParametersConstructor(dartParser.ParametersConstructorContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link dartParser#constructorName}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstructorName(dartParser.ConstructorNameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link dartParser#constructorName}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstructorName(dartParser.ConstructorNameContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link dartParser#functionMain}.
 	 * @param ctx the parse tree
@@ -686,6 +666,30 @@ public interface dartParserListener extends ParseTreeListener {
 	 */
 	void exitScaffoldl(dartParser.ScaffoldlContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code button}
+	 * labeled alternative in {@link dartParser#widgets}.
+	 * @param ctx the parse tree
+	 */
+	void enterButton(dartParser.ButtonContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code button}
+	 * labeled alternative in {@link dartParser#widgets}.
+	 * @param ctx the parse tree
+	 */
+	void exitButton(dartParser.ButtonContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code textWidget}
+	 * labeled alternative in {@link dartParser#widgets}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextWidget(dartParser.TextWidgetContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code textWidget}
+	 * labeled alternative in {@link dartParser#widgets}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextWidget(dartParser.TextWidgetContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link dartParser#textField}.
 	 * @param ctx the parse tree
 	 */
@@ -708,6 +712,54 @@ public interface dartParserListener extends ParseTreeListener {
 	 */
 	void exitTextFieldControllerPropertyl(dartParser.TextFieldControllerPropertylContext ctx);
 	/**
+	 * Enter a parse tree produced by the {@code textFieldHintTextl}
+	 * labeled alternative in {@link dartParser#textFieldProperties}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextFieldHintTextl(dartParser.TextFieldHintTextlContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code textFieldHintTextl}
+	 * labeled alternative in {@link dartParser#textFieldProperties}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextFieldHintTextl(dartParser.TextFieldHintTextlContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code textFieldBorderRadiusl}
+	 * labeled alternative in {@link dartParser#textFieldProperties}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextFieldBorderRadiusl(dartParser.TextFieldBorderRadiuslContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code textFieldBorderRadiusl}
+	 * labeled alternative in {@link dartParser#textFieldProperties}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextFieldBorderRadiusl(dartParser.TextFieldBorderRadiuslContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code textFieldonsubmitl}
+	 * labeled alternative in {@link dartParser#textFieldProperties}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextFieldonsubmitl(dartParser.TextFieldonsubmitlContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code textFieldonsubmitl}
+	 * labeled alternative in {@link dartParser#textFieldProperties}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextFieldonsubmitl(dartParser.TextFieldonsubmitlContext ctx);
+	/**
+	 * Enter a parse tree produced by the {@code textFieldObscureTextl}
+	 * labeled alternative in {@link dartParser#textFieldProperties}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextFieldObscureTextl(dartParser.TextFieldObscureTextlContext ctx);
+	/**
+	 * Exit a parse tree produced by the {@code textFieldObscureTextl}
+	 * labeled alternative in {@link dartParser#textFieldProperties}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextFieldObscureTextl(dartParser.TextFieldObscureTextlContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link dartParser#textFieldControllerProperty}.
 	 * @param ctx the parse tree
 	 */
@@ -717,6 +769,46 @@ public interface dartParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTextFieldControllerProperty(dartParser.TextFieldControllerPropertyContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#textFieldHintText}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextFieldHintText(dartParser.TextFieldHintTextContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#textFieldHintText}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextFieldHintText(dartParser.TextFieldHintTextContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#textFieldBorderRadius}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextFieldBorderRadius(dartParser.TextFieldBorderRadiusContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#textFieldBorderRadius}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextFieldBorderRadius(dartParser.TextFieldBorderRadiusContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#textFieldOnsubmit}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextFieldOnsubmit(dartParser.TextFieldOnsubmitContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#textFieldOnsubmit}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextFieldOnsubmit(dartParser.TextFieldOnsubmitContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#textFieldObscureText}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextFieldObscureText(dartParser.TextFieldObscureTextContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#textFieldObscureText}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextFieldObscureText(dartParser.TextFieldObscureTextContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link dartParser#image}.
 	 * @param ctx the parse tree
@@ -804,17 +896,17 @@ public interface dartParserListener extends ParseTreeListener {
 	 */
 	void exitContainer(dartParser.ContainerContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code colorl}
+	 * Enter a parse tree produced by the {@code boxDecorationl}
 	 * labeled alternative in {@link dartParser#containerproperties}.
 	 * @param ctx the parse tree
 	 */
-	void enterColorl(dartParser.ColorlContext ctx);
+	void enterBoxDecorationl(dartParser.BoxDecorationlContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code colorl}
+	 * Exit a parse tree produced by the {@code boxDecorationl}
 	 * labeled alternative in {@link dartParser#containerproperties}.
 	 * @param ctx the parse tree
 	 */
-	void exitColorl(dartParser.ColorlContext ctx);
+	void exitBoxDecorationl(dartParser.BoxDecorationlContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code heightcontainerl}
 	 * labeled alternative in {@link dartParser#containerproperties}.
@@ -881,6 +973,26 @@ public interface dartParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitWidthcontainer(dartParser.WidthcontainerContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#containerBorderRadius}.
+	 * @param ctx the parse tree
+	 */
+	void enterContainerBorderRadius(dartParser.ContainerBorderRadiusContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#containerBorderRadius}.
+	 * @param ctx the parse tree
+	 */
+	void exitContainerBorderRadius(dartParser.ContainerBorderRadiusContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#boxDecoration}.
+	 * @param ctx the parse tree
+	 */
+	void enterBoxDecoration(dartParser.BoxDecorationContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#boxDecoration}.
+	 * @param ctx the parse tree
+	 */
+	void exitBoxDecoration(dartParser.BoxDecorationContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link dartParser#row}.
 	 * @param ctx the parse tree
@@ -1038,66 +1150,6 @@ public interface dartParserListener extends ParseTreeListener {
 	 */
 	void exitListScrolling(dartParser.ListScrollingContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link dartParser#navigatorPushExpr}.
-	 * @param ctx the parse tree
-	 */
-	void enterNavigatorPushExpr(dartParser.NavigatorPushExprContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link dartParser#navigatorPushExpr}.
-	 * @param ctx the parse tree
-	 */
-	void exitNavigatorPushExpr(dartParser.NavigatorPushExprContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link dartParser#materialPageRouteExpr}.
-	 * @param ctx the parse tree
-	 */
-	void enterMaterialPageRouteExpr(dartParser.MaterialPageRouteExprContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link dartParser#materialPageRouteExpr}.
-	 * @param ctx the parse tree
-	 */
-	void exitMaterialPageRouteExpr(dartParser.MaterialPageRouteExprContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link dartParser#pageBuilderExpr}.
-	 * @param ctx the parse tree
-	 */
-	void enterPageBuilderExpr(dartParser.PageBuilderExprContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link dartParser#pageBuilderExpr}.
-	 * @param ctx the parse tree
-	 */
-	void exitPageBuilderExpr(dartParser.PageBuilderExprContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link dartParser#pageInstanceExpr}.
-	 * @param ctx the parse tree
-	 */
-	void enterPageInstanceExpr(dartParser.PageInstanceExprContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link dartParser#pageInstanceExpr}.
-	 * @param ctx the parse tree
-	 */
-	void exitPageInstanceExpr(dartParser.PageInstanceExprContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link dartParser#typeName}.
-	 * @param ctx the parse tree
-	 */
-	void enterTypeName(dartParser.TypeNameContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link dartParser#typeName}.
-	 * @param ctx the parse tree
-	 */
-	void exitTypeName(dartParser.TypeNameContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link dartParser#navigatorPopExpr}.
-	 * @param ctx the parse tree
-	 */
-	void enterNavigatorPopExpr(dartParser.NavigatorPopExprContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link dartParser#navigatorPopExpr}.
-	 * @param ctx the parse tree
-	 */
-	void exitNavigatorPopExpr(dartParser.NavigatorPopExprContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link dartParser#textButtonExpr}.
 	 * @param ctx the parse tree
 	 */
@@ -1158,6 +1210,56 @@ public interface dartParserListener extends ParseTreeListener {
 	 */
 	void exitTextExpr(dartParser.TextExprContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link dartParser#alignPos}.
+	 * @param ctx the parse tree
+	 */
+	void enterAlignPos(dartParser.AlignPosContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#alignPos}.
+	 * @param ctx the parse tree
+	 */
+	void exitAlignPos(dartParser.AlignPosContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#textAlign}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextAlign(dartParser.TextAlignContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#textAlign}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextAlign(dartParser.TextAlignContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#textStyle}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextStyle(dartParser.TextStyleContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#textStyle}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextStyle(dartParser.TextStyleContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#textColor}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextColor(dartParser.TextColorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#textColor}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextColor(dartParser.TextColorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#textSize}.
+	 * @param ctx the parse tree
+	 */
+	void enterTextSize(dartParser.TextSizeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#textSize}.
+	 * @param ctx the parse tree
+	 */
+	void exitTextSize(dartParser.TextSizeContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link dartParser#stringLiteralExpr}.
 	 * @param ctx the parse tree
 	 */
@@ -1167,4 +1269,54 @@ public interface dartParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitStringLiteralExpr(dartParser.StringLiteralExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#navigatorPushExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterNavigatorPushExpr(dartParser.NavigatorPushExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#navigatorPushExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitNavigatorPushExpr(dartParser.NavigatorPushExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#materialPageRouteExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterMaterialPageRouteExpr(dartParser.MaterialPageRouteExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#materialPageRouteExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitMaterialPageRouteExpr(dartParser.MaterialPageRouteExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#pageBuilderExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterPageBuilderExpr(dartParser.PageBuilderExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#pageBuilderExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitPageBuilderExpr(dartParser.PageBuilderExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#pageInstanceExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterPageInstanceExpr(dartParser.PageInstanceExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#pageInstanceExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitPageInstanceExpr(dartParser.PageInstanceExprContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link dartParser#navigatorPopExpr}.
+	 * @param ctx the parse tree
+	 */
+	void enterNavigatorPopExpr(dartParser.NavigatorPopExprContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link dartParser#navigatorPopExpr}.
+	 * @param ctx the parse tree
+	 */
+	void exitNavigatorPopExpr(dartParser.NavigatorPopExprContext ctx);
 }

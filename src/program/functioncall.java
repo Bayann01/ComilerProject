@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class functioncall extends exprission{
-    String name ;
-    List<exprission> parameters ;
+    public String name ;
+    public List<exprission> parameters ;
 
 
     public functioncall(String name) {

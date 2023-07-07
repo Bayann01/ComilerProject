@@ -1,7 +1,7 @@
 package program;
 
 public class Scaffold extends flutterProgramm{
-    widget widget ;
+    public widget widget ;
     public Scaffold(program.widget widget) {
         this.widget = widget;
     }

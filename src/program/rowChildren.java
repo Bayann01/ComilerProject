@@ -4,7 +4,7 @@ import java.nio.file.Watchable;
 import java.util.ArrayList;
 
 public class rowChildren extends rowproperties {
-    ArrayList<widget> W ;
+    public ArrayList<widget> W ;
 
     public rowChildren() {
         W = new ArrayList<>();

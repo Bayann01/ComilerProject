@@ -3,7 +3,7 @@ package program;
 import java.util.ArrayList;
 
 public class row extends widget{
-    rowproperties rowproperties;
+    public rowproperties rowproperties;
 
     public program.rowproperties getRowproperties() {
         return rowproperties;
